@@ -1,0 +1,5 @@
+Title: 关于有序推动绿电直连发展有关事项的通知（发改能源〔2025〕650号）
+Source: 国家发展改革委/国家能源局
+URL: https://www.nea.gov.cn/20250530/2d67a6e49c044f2eacabe1fddf48d20f/c.html
+Expected: HTML
+Relevance: 题目三项绿电直连指标的直接政策来源。

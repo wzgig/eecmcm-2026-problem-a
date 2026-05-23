@@ -1,0 +1,5 @@
+Title: 关于支持电力领域新型经营主体创新发展的指导意见（国能发法改〔2024〕93号）
+Source: 国家能源局
+URL: https://www.gov.cn/zhengce/zhengceku/202412/content_6991420.htm
+Expected: HTML
+Relevance: 智能微电网、新能源直连、负荷灵活性和电力市场主体依据。

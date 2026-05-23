@@ -1,0 +1,6 @@
+Title: Operational Optimization of Grid-Connected Wind-PV-Hydrogen Storage System Considering Renewable Energy Consumption
+Source: Energies, 2025
+URL: https://www.mdpi.com/1996-1073/18/24/6518/pdf
+Expected: PDF
+Relevance: 并网风光氢储系统，新能源消纳和运行优化；无氨但适合功率平衡/储能。
+Download note: HTTP 403, 408 bytes

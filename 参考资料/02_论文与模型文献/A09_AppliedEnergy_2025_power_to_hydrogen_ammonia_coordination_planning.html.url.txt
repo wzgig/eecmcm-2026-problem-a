@@ -1,0 +1,6 @@
+Title: Power-to-hydrogen-ammonia coordination and planning for integrated energy systems
+Source: Applied Energy, 2025
+URL: https://www.sciencedirect.com/science/article/pii/S0306261925019889
+Expected: HTML
+Relevance: P2H/P2A协调规划、综合能源系统和系统价值分析。
+Download note: HTTP 403, 832787 bytes

@@ -1,0 +1,489 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          20
+        ]
+      ],
+      "date-time": "2026-05-20T21:56:33Z",
+      "timestamp": 1779314193111,
+      "version": "3.51.4"
+    },
+    "reference-count": 23,
+    "publisher": "Royal Society of Chemistry (RSC)",
+    "issue": "9",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2020,
+              7,
+              13
+            ]
+          ],
+          "date-time": "2020-07-13T00:00:00Z",
+          "timestamp": 1594598400000
+        },
+        "content-version": "vor",
+        "delay-in-days": 194,
+        "URL": "http://creativecommons.org/licenses/by-nc/3.0/"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100000266",
+        "name": "Engineering and Physical Sciences Research Council",
+        "doi-asserted-by": "crossref",
+        "award": [
+          "iCASE Award 1658940"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "iCASE Award 1658940"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100000266",
+            "id-type": "DOI",
+            "asserted-by": "crossref"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "rsc.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Energy Environ. Sci."
+    ],
+    "abstract": "<p>Evaluation of islanded green ammonia production's economic viability at 534 locations worldwide showing competitiveness by 2030.</p>",
+    "DOI": "10.1039/d0ee01707h",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2020,
+          7,
+          13
+        ]
+      ],
+      "date-time": "2020-07-13T14:05:19Z",
+      "timestamp": 1594649119000
+    },
+    "page": "2957-2966",
+    "update-policy": "https://doi.org/10.1039/rsc_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 190,
+    "title": [
+      "Techno-economic viability of islanded green ammonia as a carbon-free energy vector and as a substitute for conventional production"
+    ],
+    "prefix": "10.1039",
+    "volume": "13",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-6872-5820",
+        "authenticated-orcid": false,
+        "given": "Richard Michael",
+        "family": "Nayak-Luke",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "University of Oxford"
+          },
+          {
+            "name": "Department of Engineering Science"
+          },
+          {
+            "name": "Oxford"
+          },
+          {
+            "name": "UK"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-7859-6102",
+        "authenticated-orcid": false,
+        "given": "René",
+        "family": "Bañares-Alcántara",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "University of Oxford"
+          },
+          {
+            "name": "Department of Engineering Science"
+          },
+          {
+            "name": "Oxford"
+          },
+          {
+            "name": "UK"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "member": "292",
+    "published-online": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "D0EE01707H-(cit1)/*[position()=1]",
+        "unstructured": "Bloomberg, Commodities, accessed 1st May, 2019,  https://www.bloomberg.com/markets/commodities"
+      },
+      {
+        "key": "D0EE01707H-(cit2)/*[position()=1]",
+        "doi-asserted-by": "crossref",
+        "first-page": "636",
+        "DOI": "10.1038/ngeo325",
+        "volume": "1",
+        "author": "Erisman",
+        "year": "2008",
+        "journal-title": "Nat. Geosci."
+      },
+      {
+        "key": "D0EE01707H-(cit3)/*[position()=1]",
+        "volume-title": "How many people does synthetic fertilizer feed?",
+        "author": "Ritchie",
+        "year": "2017",
+        "unstructured": "H. Ritchie  ,  How many people does synthetic fertilizer feed? 2017 , accessed 9th May 2019,  https://ourworldindata.org/how-many-people-does-synthetic-fertilizer-feed"
+      },
+      {
+        "key": "D0EE01707H-(cit4)/*[position()=1]",
+        "volume-title": "Renewables crossing boundaries: ammonia et al. in NH3 Event",
+        "author": "Philibert",
+        "year": "2017",
+        "unstructured": "C. Philibert  ,  Renewables crossing boundaries: ammonia et al. in NH3 Event ,  Rotterdam ,  2017"
+      },
+      {
+        "key": "D0EE01707H-(cit5)/*[position()=1]",
+        "volume-title": "Yara Fertilizer Industry Handbook",
+        "author": "Yara",
+        "year": "2018",
+        "unstructured": "Yara  ,  Yara Fertilizer Industry Handbook ,  2018"
+      },
+      {
+        "key": "D0EE01707H-(cit6)/*[position()=1]",
+        "doi-asserted-by": "publisher",
+        "first-page": "1067",
+        "DOI": "10.1038/s41560-018-0268-z",
+        "volume": "3",
+        "author": "Gao",
+        "year": "2018",
+        "journal-title": "Nat. Energy"
+      },
+      {
+        "key": "D0EE01707H-(cit7)/*[position()=1]",
+        "doi-asserted-by": "crossref",
+        "first-page": "2304",
+        "DOI": "10.1039/b720020j",
+        "volume": "18",
+        "author": "Klerke",
+        "year": "2008",
+        "journal-title": "J. Mater. Chem."
+      },
+      {
+        "key": "D0EE01707H-(cit8)/*[position()=1]",
+        "doi-asserted-by": "crossref",
+        "first-page": "17295",
+        "DOI": "10.1016/j.ijhydene.2018.06.121",
+        "volume": "43",
+        "author": "Ikäheimo",
+        "year": "2018",
+        "journal-title": "Int. J. Hydrogen Energy"
+      },
+      {
+        "key": "D0EE01707H-(cit9)/*[position()=1]",
+        "doi-asserted-by": "crossref",
+        "first-page": "20914",
+        "DOI": "10.1016/j.ijhydene.2016.06.243",
+        "volume": "41",
+        "author": "Ould Amrouche",
+        "year": "2016",
+        "journal-title": "Int. J. Hydrogen Energy"
+      },
+      {
+        "key": "D0EE01707H-(cit10)/*[position()=1]",
+        "doi-asserted-by": "crossref",
+        "first-page": "221",
+        "DOI": "10.1109/TSTE.2015.2483489",
+        "volume": "7",
+        "author": "Arriaga",
+        "year": "2016",
+        "journal-title": "IEEE Transactions on Sustainable Energy"
+      },
+      {
+        "key": "D0EE01707H-(cit11)/*[position()=1]",
+        "doi-asserted-by": "crossref",
+        "first-page": "1482",
+        "DOI": "10.1016/j.ijhydene.2011.10.004",
+        "volume": "37",
+        "author": "Lan",
+        "year": "2012",
+        "journal-title": "Int. J. Hydrogen Energy"
+      },
+      {
+        "key": "D0EE01707H-(cit13)/*[position()=1]",
+        "doi-asserted-by": "crossref",
+        "first-page": "14607",
+        "DOI": "10.1021/acs.iecr.8b02447",
+        "volume": "57",
+        "author": "Nayak-Luke",
+        "year": "2018",
+        "journal-title": "Ind. Eng. Chem. Res."
+      },
+      {
+        "key": "D0EE01707H-(cit14)/*[position()=1]",
+        "doi-asserted-by": "crossref",
+        "first-page": "649",
+        "DOI": "10.1002/cite.201300167",
+        "volume": "86",
+        "author": "Beerbühl",
+        "year": "2014",
+        "journal-title": "Chem. Ing. Tech."
+      },
+      {
+        "issue": "6",
+        "key": "D0EE01707H-(cit15)/*[position()=1]",
+        "doi-asserted-by": "publisher",
+        "first-page": "1186",
+        "DOI": "10.1016/j.joule.2020.04.004",
+        "volume": "4",
+        "author": "MacFarlane",
+        "year": "2020",
+        "journal-title": "Joule"
+      },
+      {
+        "key": "D0EE01707H-(cit16)/*[position()=1]",
+        "doi-asserted-by": "crossref",
+        "first-page": "331",
+        "DOI": "10.1039/C9EE02873K",
+        "volume": "13",
+        "author": "Smith",
+        "year": "2020",
+        "journal-title": "Energy Environ. Sci."
+      },
+      {
+        "key": "D0EE01707H-(cit18)/*[position()=1]",
+        "year": "2018",
+        "unstructured": "Meteotest, Meteonorm,  2018 , accessed 4th October 2019,  http://www.meteonorm.com/en/"
+      },
+      {
+        "key": "D0EE01707H-(cit19)/*[position()=1]",
+        "year": "2018",
+        "unstructured": "Finance3.1, WACC Expert,  2018 , accessed 4th November 2018,  http://www.waccexpert.com/"
+      },
+      {
+        "key": "D0EE01707H-(cit20)/*[position()=1]",
+        "doi-asserted-by": "crossref",
+        "first-page": "30470",
+        "DOI": "10.1016/j.ijhydene.2017.10.045",
+        "volume": "42",
+        "author": "Schmidt",
+        "year": "2017",
+        "journal-title": "Int. J. Hydrogen Energy"
+      },
+      {
+        "key": "D0EE01707H-(cit21)/*[position()=1]",
+        "doi-asserted-by": "crossref",
+        "first-page": "2440",
+        "DOI": "10.1016/j.rser.2017.09.003",
+        "volume": "82",
+        "author": "Buttler",
+        "year": "2018",
+        "journal-title": "Renewable Sustainable Energy Rev."
+      },
+      {
+        "key": "D0EE01707H-(cit22)/*[position()=1]",
+        "unstructured": "J. A. Løkke, Nel Group, accessed 4th December, 2018  https://www.fch.europa.eu/sites/default/files/S2.3-J.A.L%C3%B6kke,Nel.pdf"
+      },
+      {
+        "key": "D0EE01707H-(cit26)/*[position()=1]",
+        "volume-title": "Demands for Grants (2018-19)",
+        "author": "Adsul",
+        "year": "2018",
+        "unstructured": "A. Adsul  ,  Demands for Grants (2018-19) ,  Ministry of Chemicals and Fertilizers, Government of India ,  Lok Sabha Secretariat, New Delhi ,  2018"
+      },
+      {
+        "key": "D0EE01707H-(cit28)/*[position()=1]",
+        "volume-title": "The Economic Times",
+        "author": "Sharma",
+        "year": "2019",
+        "unstructured": "Y. Sharma  ,  Government keen to source coal gasification technology from US ,  The Economic Times ,  2019"
+      },
+      {
+        "key": "D0EE01707H-(cit29)/*[position()=1]",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1007/978-1-4020-6860-7_8",
+        "volume-title": "Micronutrient Deficiencies in Global Crop Production",
+        "author": "van der Waals",
+        "year": "2008",
+        "unstructured": "J. H. van der Waals   and  M. C.Laker , in  Micronutrient Deficiencies in Global Crop Production , ed.  B. J. Alloway ,  Springer ,  Dordrecht ,  2008 ,  10.1007/978-1-4020-6860-7_8 ,  pp. 201–224"
+      }
+    ],
+    "container-title": [
+      "Energy &amp; Environmental Science"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "http://pubs.rsc.org/en/content/articlepdf/2020/EE/D0EE01707H",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          4,
+          17
+        ]
+      ],
+      "date-time": "2024-04-17T18:15:57Z",
+      "timestamp": 1713377757000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://xlink.rsc.org/?DOI=D0EE01707H"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "references-count": 23,
+    "journal-issue": {
+      "issue": "9",
+      "published-print": {
+        "date-parts": [
+          [
+            2020,
+            9,
+            16
+          ]
+        ]
+      }
+    },
+    "URL": "https://doi.org/10.1039/d0ee01707h",
+    "relation": {},
+    "ISSN": [
+      "1754-5692",
+      "1754-5706"
+    ],
+    "issn-type": [
+      {
+        "value": "1754-5692",
+        "type": "print"
+      },
+      {
+        "value": "1754-5706",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2020
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "This document is Similarity Check deposited",
+        "name": "similarity_check",
+        "explanation": {
+          "URL": "https://www.crossref.org/services/similarity-check/"
+        },
+        "group": {
+          "name": "similarity_check",
+          "label": "SIMILARITY CHECK"
+        }
+      },
+      {
+        "value": "Supplementary Information",
+        "URL": "https://doi.org/10.1039/D0EE01707H",
+        "name": "related_data",
+        "group": {
+          "name": "related_data",
+          "label": "RELATED DATA"
+        }
+      },
+      {
+        "value": "Richard Michael Nayak-Luke (ORCID)",
+        "URL": "http://orcid.org/0000-0002-6872-5820",
+        "name": "identifier",
+        "group": {
+          "name": "author_identifiers",
+          "label": "IDENTIFIERS"
+        }
+      },
+      {
+        "value": "René Bañares-Alcántara (ORCID)",
+        "URL": "http://orcid.org/0000-0002-7859-6102",
+        "name": "identifier",
+        "group": {
+          "name": "author_identifiers",
+          "label": "IDENTIFIERS"
+        }
+      },
+      {
+        "value": "Single-blind",
+        "order": 2,
+        "name": "peer_review_method",
+        "group": {
+          "name": "peer_review_method",
+          "label": "PEER REVIEW METHOD"
+        }
+      },
+      {
+        "value": "Received 28 May 2020; Accepted 13 July 2020;  Accepted Manuscript published 13 July 2020;  Advance Article published 21 July 2020;  Version of Record published 16 September 2020",
+        "order": 1,
+        "name": "history",
+        "group": {
+          "name": "publication_history",
+          "label": "PUBLICATION HISTORY"
+        }
+      }
+    ]
+  }
+}

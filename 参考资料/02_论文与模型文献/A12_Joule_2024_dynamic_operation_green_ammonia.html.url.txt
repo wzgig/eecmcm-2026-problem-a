@@ -1,0 +1,6 @@
+Title: The importance of dynamic operation and renewable energy source on the economic feasibility of green ammonia
+Source: Joule, 2024
+URL: https://www.sciencedirect.com/science/article/pii/S2542435123004910
+Expected: HTML
+Relevance: 动态运行和风/光资源对绿氨经济性的影响。
+Download note: HTTP 403, 832787 bytes

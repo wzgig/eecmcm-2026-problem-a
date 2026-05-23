@@ -1,0 +1,1054 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          5
+        ]
+      ],
+      "date-time": "2026-05-05T12:24:56Z",
+      "timestamp": 1777983896273,
+      "version": "3.51.4"
+    },
+    "reference-count": 79,
+    "publisher": "Royal Society of Chemistry (RSC)",
+    "issue": "9",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              2,
+              10
+            ]
+          ],
+          "date-time": "2026-02-10T00:00:00Z",
+          "timestamp": 1770681600000
+        },
+        "content-version": "vor",
+        "delay-in-days": 40,
+        "URL": "http://creativecommons.org/licenses/by-nc/3.0/"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/100000879",
+        "name": "Alfred P. Sloan Foundation",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "G-2024-22698"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "G-2024-22698"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/100000879",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "rsc.org"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Green Chem."
+    ],
+    "abstract": "<jats:p>Decentralized, electrified Haber–Bosch ammonia can reduce supply risks but is costly today. Optimization across six countries shows competitiveness emerging by 2045, driven by cheaper renewables, flexible reactors, and efficient, dynamic green chemistry designs.</jats:p>",
+    "DOI": "10.1039/d5gc06782k",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2026,
+          2,
+          10
+        ]
+      ],
+      "date-time": "2026-02-10T11:41:08Z",
+      "timestamp": 1770723668000
+    },
+    "page": "4103-4118",
+    "update-policy": "https://doi.org/10.1039/rsc_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 2,
+    "title": [
+      "Optimal design of decentralized ammonia production\n                    <i>via</i>\n                    electric Haber–Bosch systems"
+    ],
+    "prefix": "10.1039",
+    "volume": "28",
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-1280-9945",
+        "authenticated-orcid": false,
+        "given": "Lorenzo",
+        "family": "Rosa",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Biosphere Sciences & Engineering, Carnegie Institution for Science, Stanford, CA 94305, USA"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Davide",
+        "family": "Tonelli",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Biosphere Sciences & Engineering, Carnegie Institution for Science, Stanford, CA 94305, USA"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "member": "292",
+    "published-online": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "issue": "1",
+        "key": "D5GC06782K/cit1/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "10",
+        "DOI": "10.1038/s44359-024-00012-2",
+        "volume": "1",
+        "author": "Garvey",
+        "year": "2025",
+        "journal-title": "Nat. Rev. Clean Technol."
+      },
+      {
+        "issue": "1",
+        "key": "D5GC06782K/cit2/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "014008",
+        "DOI": "10.1088/1748-9326/aca815",
+        "volume": "18",
+        "author": "Rosa",
+        "year": "2022",
+        "journal-title": "Environ. Res. Lett."
+      },
+      {
+        "key": "D5GC06782K/cit3/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "1",
+        "DOI": "10.1038/s43016-025-01125-y",
+        "author": "Mingolla",
+        "year": "2025",
+        "journal-title": "Nat. Food"
+      },
+      {
+        "issue": "9",
+        "key": "D5GC06782K/cit4/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "095007",
+        "DOI": "10.1088/1748-9326/11/9/095007",
+        "volume": "11",
+        "author": "Lassaletta",
+        "year": "2016",
+        "journal-title": "Environ. Res. Lett."
+      },
+      {
+        "issue": "9",
+        "key": "D5GC06782K/cit5/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "095004",
+        "DOI": "10.1088/1748-9326/ab9388",
+        "volume": "15",
+        "author": "Beltran-Peña",
+        "year": "2020",
+        "journal-title": "Environ. Res. Lett."
+      },
+      {
+        "issue": "3",
+        "key": "D5GC06782K/cit6/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "1034",
+        "DOI": "10.1039/D1EE02118D",
+        "volume": "15",
+        "author": "van der Spek",
+        "year": "2022",
+        "journal-title": "Energy Environ. Sci."
+      },
+      {
+        "key": "D5GC06782K/cit7/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "1",
+        "DOI": "10.1038/s44359-025-00050-4",
+        "author": "Johnson",
+        "year": "2025",
+        "journal-title": "Nat. Rev. Clean Technol."
+      },
+      {
+        "issue": "11",
+        "key": "D5GC06782K/cit8/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "755",
+        "DOI": "10.1038/s44359-025-00102-9",
+        "volume": "1",
+        "author": "Wen",
+        "year": "2025",
+        "journal-title": "Nat. Rev. Clean Technol."
+      },
+      {
+        "issue": "7",
+        "key": "D5GC06782K/cit9/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "612",
+        "DOI": "10.1038/s44160-023-00321-7",
+        "volume": "2",
+        "author": "Ye",
+        "year": "2023",
+        "journal-title": "Nat. Synth."
+      },
+      {
+        "key": "D5GC06782K/cit10/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "100667",
+        "DOI": "10.1016/j.coche.2020.100667",
+        "volume": "31",
+        "author": "Palys",
+        "year": "2021",
+        "journal-title": "Curr. Opin. Chem. Eng."
+      },
+      {
+        "issue": "2",
+        "key": "D5GC06782K/cit11/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "126",
+        "DOI": "10.1579/0044-7447-31.2.126",
+        "volume": "31",
+        "author": "Smil",
+        "year": "2002",
+        "journal-title": "AMBIO"
+      },
+      {
+        "key": "D5GC06782K/cit12/1",
+        "volume-title": "Ammonia: zero-carbon fertiliser, fuel and energy store",
+        "year": "2020",
+        "unstructured": "Ammonia: zero-carbon fertiliser, fuel and energy store , February 2020 DES5711 ISBN: 978-1-78252-448-9,  The Royal Society ,  2020 .  https://royalsociety.org/-/media/policy/projects/green-ammonia/green-ammonia-policy-briefing.pdf"
+      },
+      {
+        "key": "D5GC06782K/cit13/1",
+        "volume-title": "Ammonia Technology Roadmap",
+        "author": "IEA",
+        "year": "2021",
+        "unstructured": "IEA ,  Ammonia Technology Roadmap ,  IEA ,  Paris ,  2021 . Available from:  https://www.iea.org/reports/ammonia-technology-roadmap , Licence: CC BY 4.0"
+      },
+      {
+        "issue": "1",
+        "key": "D5GC06782K/cit14/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "14490",
+        "DOI": "10.1038/s41598-022-18773-w",
+        "volume": "12",
+        "author": "Menegat",
+        "year": "2022",
+        "journal-title": "Sci. Rep."
+      },
+      {
+        "issue": "2",
+        "key": "D5GC06782K/cit15/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "170",
+        "DOI": "10.1038/s43016-023-00698-w",
+        "volume": "4",
+        "author": "Gao",
+        "year": "2023",
+        "journal-title": "Nat. Food"
+      },
+      {
+        "issue": "11",
+        "key": "D5GC06782K/cit16/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "114064",
+        "DOI": "10.1088/1748-9326/ad858c",
+        "volume": "19",
+        "author": "Schueler",
+        "year": "2024",
+        "journal-title": "Environ. Res. Lett."
+      },
+      {
+        "issue": "46",
+        "key": "D5GC06782K/cit17/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "e2311728120",
+        "DOI": "10.1073/pnas.2311728120",
+        "volume": "120",
+        "author": "Bertagni",
+        "year": "2023",
+        "journal-title": "Proc. Natl. Acad. Sci. U. S. A."
+      },
+      {
+        "issue": "10",
+        "key": "D5GC06782K/cit18/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "717",
+        "DOI": "10.1038/s43017-024-00586-2",
+        "volume": "5",
+        "author": "Zhang",
+        "year": "2024",
+        "journal-title": "Nat. Rev. Earth Environ."
+      },
+      {
+        "issue": "1",
+        "key": "D5GC06782K/cit19/1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.oneear.2024.12.009",
+        "volume": "8",
+        "author": "Quitzow",
+        "year": "2025",
+        "journal-title": "One Earth"
+      },
+      {
+        "key": "D5GC06782K/cit20/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "1",
+        "DOI": "10.1038/s44359-025-00082-w",
+        "author": "Meng",
+        "year": "2025",
+        "journal-title": "Nat. Rev. Clean Technol."
+      },
+      {
+        "issue": "6",
+        "key": "D5GC06782K/cit21/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "682",
+        "DOI": "10.1016/j.oneear.2023.05.006",
+        "volume": "6",
+        "author": "Gabrielli",
+        "year": "2023",
+        "journal-title": "One Earth"
+      },
+      {
+        "issue": "22",
+        "key": "D5GC06782K/cit22/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "6422",
+        "DOI": "10.1021/acs.iecr.5b04937",
+        "volume": "55",
+        "author": "Arora",
+        "year": "2016",
+        "journal-title": "Ind. Eng. Chem. Res."
+      },
+      {
+        "key": "D5GC06782K/cit23/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "106556",
+        "DOI": "10.1016/j.biombioe.2022.106556",
+        "volume": "165",
+        "author": "Buffi",
+        "year": "2022",
+        "journal-title": "Biomass Bioenergy"
+      },
+      {
+        "issue": "12",
+        "key": "D5GC06782K/cit24/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "2235",
+        "DOI": "10.1016/j.oneear.2024.11.005",
+        "volume": "7",
+        "author": "Istrate",
+        "year": "2024",
+        "journal-title": "One Earth"
+      },
+      {
+        "key": "D5GC06782K/cit25/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "112123",
+        "DOI": "10.1016/j.rser.2022.112123",
+        "volume": "157",
+        "author": "Rosa",
+        "year": "2022",
+        "journal-title": "Renewable Sustainable Energy Rev."
+      },
+      {
+        "issue": "7",
+        "key": "D5GC06782K/cit26/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "1578",
+        "DOI": "10.1016/j.joule.2019.05.001",
+        "volume": "3",
+        "author": "Comer",
+        "year": "2019",
+        "journal-title": "Joule"
+      },
+      {
+        "key": "D5GC06782K/cit27/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "113691",
+        "DOI": "10.1016/j.rser.2023.113691",
+        "volume": "187",
+        "author": "Srivastava",
+        "year": "2023",
+        "journal-title": "Renewable Sustainable Energy Rev."
+      },
+      {
+        "issue": "1",
+        "key": "D5GC06782K/cit28/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "3753",
+        "DOI": "10.1038/s41467-024-48145-z",
+        "volume": "15",
+        "author": "Mingolla",
+        "year": "2024",
+        "journal-title": "Nat. Commun."
+      },
+      {
+        "issue": "1",
+        "key": "D5GC06782K/cit29/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "7043",
+        "DOI": "10.1038/s41467-024-51251-7",
+        "volume": "15",
+        "author": "Terlouw",
+        "year": "2024",
+        "journal-title": "Nat. Commun."
+      },
+      {
+        "issue": "1",
+        "key": "D5GC06782K/cit30/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "5532",
+        "DOI": "10.1038/s41467-023-41107-x",
+        "volume": "14",
+        "author": "Tonelli",
+        "year": "2023",
+        "journal-title": "Nat. Commun."
+      },
+      {
+        "issue": "29",
+        "key": "D5GC06782K/cit31/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "9740",
+        "DOI": "10.1021/acssuschemeng.1c01915",
+        "volume": "9",
+        "author": "D'Angelo",
+        "year": "2021",
+        "journal-title": "ACS Sustainable Chem. Eng."
+      },
+      {
+        "issue": "8",
+        "key": "D5GC06782K/cit32/1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.isci.2023.107389",
+        "volume": "26",
+        "author": "Mayer",
+        "year": "2023",
+        "journal-title": "iScience"
+      },
+      {
+        "issue": "31",
+        "key": "D5GC06782K/cit33/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "13929",
+        "DOI": "10.1021/acs.iecr.4c01649?urlappend=%3Fref%3DPDF&jav=VoR&rel=cite-as",
+        "volume": "63",
+        "author": "Gabrielli",
+        "year": "2024",
+        "journal-title": "Ind. Eng. Chem. Res."
+      },
+      {
+        "issue": "6",
+        "key": "D5GC06782K/cit34/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "469",
+        "DOI": "10.1038/s43016-024-00979-y",
+        "volume": "5",
+        "author": "Tonelli",
+        "year": "2024",
+        "journal-title": "Nat. Food"
+      },
+      {
+        "key": "D5GC06782K/cit35/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "404",
+        "DOI": "10.1016/j.renene.2020.05.041",
+        "volume": "157",
+        "author": "Guerra",
+        "year": "2020",
+        "journal-title": "Renewable Energy"
+      },
+      {
+        "key": "D5GC06782K/cit36/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "116401",
+        "DOI": "10.1016/j.apenergy.2020.116401",
+        "volume": "284",
+        "author": "Zhang",
+        "year": "2021",
+        "journal-title": "Appl. Energy"
+      },
+      {
+        "key": "D5GC06782K/cit37/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "118908",
+        "DOI": "10.1016/j.enconman.2024.118908",
+        "volume": "318",
+        "author": "Sahu",
+        "year": "2024",
+        "journal-title": "Energy Convers. Manage."
+      },
+      {
+        "issue": "8",
+        "key": "D5GC06782K/cit38/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "3314",
+        "DOI": "10.1039/D2EE02683J",
+        "volume": "16",
+        "author": "D'Angelo",
+        "year": "2023",
+        "journal-title": "Energy Environ. Sci."
+      },
+      {
+        "key": "D5GC06782K/cit39/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "146473",
+        "DOI": "10.1016/j.jclepro.2025.146473",
+        "volume": "524",
+        "author": "Özcan",
+        "year": "2025",
+        "journal-title": "J. Cleaner Prod."
+      },
+      {
+        "key": "D5GC06782K/cit40/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "113057",
+        "DOI": "10.1016/j.rser.2022.113057",
+        "volume": "173",
+        "author": "Campion",
+        "year": "2023",
+        "journal-title": "Renewable Sustainable Energy Rev."
+      },
+      {
+        "key": "D5GC06782K/cit41/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "100946",
+        "DOI": "10.1016/j.cogsc.2024.100946",
+        "volume": "48",
+        "author": "Palys",
+        "year": "2024",
+        "journal-title": "Curr. Opin. Green Sustain. Chem."
+      },
+      {
+        "key": "D5GC06782K/cit42/1",
+        "volume-title": "Ammonia as a storage solution for future decarbonized energy systems",
+        "author": "Patonia",
+        "year": "2020",
+        "unstructured": "A.Patonia  and  R.Poudineh ,  Ammonia as a storage solution for future decarbonized energy systems ,  OIES Paper ,  EL ,  2020 . Available from:  https://hdl.handle.net/10419/246565"
+      },
+      {
+        "key": "D5GC06782K/cit43/1",
+        "first-page": "3",
+        "volume": "1",
+        "author": "Basosi",
+        "year": "2014",
+        "journal-title": "Fertil. Compon. Uses Agric. Environ. Impacts"
+      },
+      {
+        "issue": "4",
+        "key": "D5GC06782K/cit44/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "1725",
+        "DOI": "10.1021/acs.est.7b04573",
+        "volume": "52",
+        "author": "Levi",
+        "year": "2018",
+        "journal-title": "Environ. Sci. Technol."
+      },
+      {
+        "key": "D5GC06782K/cit45/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "129544",
+        "DOI": "10.1016/j.cej.2021.129544",
+        "volume": "421",
+        "author": "Zhou",
+        "year": "2021",
+        "journal-title": "Chem. Eng. J."
+      },
+      {
+        "issue": "2",
+        "key": "D5GC06782K/cit46/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "331",
+        "DOI": "10.1039/C9EE02873K",
+        "volume": "13",
+        "author": "Smith",
+        "year": "2020",
+        "journal-title": "Energy Environ. Sci."
+      },
+      {
+        "issue": "5",
+        "key": "D5GC06782K/cit47/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "2535",
+        "DOI": "10.1039/D0EE03808C",
+        "volume": "14",
+        "author": "Wang",
+        "year": "2021",
+        "journal-title": "Energy Environ. Sci."
+      },
+      {
+        "issue": "2",
+        "key": "D5GC06782K/cit48/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "300",
+        "DOI": "10.1016/j.joule.2020.11.009",
+        "volume": "5",
+        "author": "Winter",
+        "year": "2021",
+        "journal-title": "Joule"
+      },
+      {
+        "issue": "2",
+        "key": "D5GC06782K/cit49/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "263",
+        "DOI": "10.1016/j.chempr.2018.10.010",
+        "volume": "5",
+        "author": "Martín",
+        "year": "2019",
+        "journal-title": "Chem"
+      },
+      {
+        "issue": "1",
+        "key": "D5GC06782K/cit50/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "142",
+        "DOI": "10.1016/j.joule.2019.10.006",
+        "volume": "4",
+        "author": "Kyriakou",
+        "year": "2020",
+        "journal-title": "Joule"
+      },
+      {
+        "issue": "11",
+        "key": "D5GC06782K/cit51/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "4583",
+        "DOI": "10.1039/D0CS01079K",
+        "volume": "51",
+        "author": "Chatenet",
+        "year": "2022",
+        "journal-title": "Chem. Soc. Rev."
+      },
+      {
+        "issue": "4",
+        "key": "D5GC06782K/cit52/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "883",
+        "DOI": "10.1016/j.joule.2024.02.012",
+        "volume": "8",
+        "author": "Dubouis",
+        "year": "2024",
+        "journal-title": "Joule"
+      },
+      {
+        "issue": "4",
+        "key": "D5GC06782K/cit53/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "1623",
+        "DOI": "10.1007/s10311-024-01732-4",
+        "volume": "22",
+        "author": "Hantoko",
+        "year": "2024",
+        "journal-title": "Environ. Chem. Lett."
+      },
+      {
+        "key": "D5GC06782K/cit54/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "118507",
+        "DOI": "10.1016/j.carbon.2023.118507",
+        "volume": "216",
+        "author": "Prabowo",
+        "year": "2024",
+        "journal-title": "Carbon"
+      },
+      {
+        "issue": "1",
+        "key": "D5GC06782K/cit55/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "7908",
+        "DOI": "10.1038/s41467-022-35489-7",
+        "volume": "13",
+        "author": "Huang",
+        "year": "2022",
+        "journal-title": "Nat. Commun."
+      },
+      {
+        "issue": "4",
+        "key": "D5GC06782K/cit56/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "290",
+        "DOI": "10.1038/s41929-019-0252-4",
+        "volume": "2",
+        "author": "Suryanto",
+        "year": "2019",
+        "journal-title": "Nat. Catal."
+      },
+      {
+        "issue": "10",
+        "key": "D5GC06782K/cit57/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "3676",
+        "DOI": "10.1021/acsenergylett.1c01614?urlappend=%3Fref%3DPDF&jav=VoR&rel=cite-as",
+        "volume": "6",
+        "author": "Lim",
+        "year": "2021",
+        "journal-title": "ACS Energy Lett."
+      },
+      {
+        "issue": "9",
+        "key": "D5GC06782K/cit58/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "1948",
+        "DOI": "10.1016/j.joule.2023.07.020",
+        "volume": "7",
+        "author": "Yang",
+        "year": "2023",
+        "journal-title": "Joule"
+      },
+      {
+        "issue": "1",
+        "key": "D5GC06782K/cit59/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "43",
+        "DOI": "10.1038/s41612-022-00265-3",
+        "volume": "5",
+        "author": "Pan",
+        "year": "2022",
+        "journal-title": "npj Clim. Atmos. Sci."
+      },
+      {
+        "issue": "8",
+        "key": "D5GC06782K/cit60/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "4198",
+        "DOI": "10.1021/acs.energyfuels.2c00238",
+        "volume": "36",
+        "author": "Ouikhalfan",
+        "year": "2022",
+        "journal-title": "Energy Fuels"
+      },
+      {
+        "key": "D5GC06782K/cit61/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "104126",
+        "DOI": "10.1016/j.seta.2024.104126",
+        "volume": "73",
+        "author": "Srivastava",
+        "year": "2025",
+        "journal-title": "Sustain. Energy Technol. Assess."
+      },
+      {
+        "issue": "4",
+        "key": "D5GC06782K/cit62/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "389",
+        "DOI": "10.1038/s43016-024-01107-6",
+        "volume": "6",
+        "author": "Ren",
+        "year": "2025",
+        "journal-title": "Nat. Food"
+      },
+      {
+        "key": "D5GC06782K/cit63/1",
+        "volume-title": "Gurobi Optimizer Reference Manual",
+        "author": "Gurobi Optimization",
+        "year": "2025",
+        "unstructured": "Gurobi Optimization ,  Gurobi Optimizer Reference Manual ,  LLC ,  2025 . Available from:  https://www.gurobi.com"
+      },
+      {
+        "issue": "9",
+        "key": "D5GC06782K/cit64/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "3583",
+        "DOI": "10.1039/D2EE01023B",
+        "volume": "15",
+        "author": "Terlouw",
+        "year": "2022",
+        "journal-title": "Energy Environ. Sci."
+      },
+      {
+        "issue": "9",
+        "key": "D5GC06782K/cit65/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "2957",
+        "DOI": "10.1039/D0EE01707H",
+        "volume": "13",
+        "author": "Nayak-Luke",
+        "year": "2020",
+        "journal-title": "Energy Environ. Sci."
+      },
+      {
+        "key": "D5GC06782K/cit66/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "408",
+        "DOI": "10.1016/j.apenergy.2017.07.142",
+        "volume": "219",
+        "author": "Gabrielli",
+        "year": "2018",
+        "journal-title": "Appl. Energy"
+      },
+      {
+        "issue": "1",
+        "key": "D5GC06782K/cit67/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "100007",
+        "DOI": "10.1016/j.ecz.2024.100007",
+        "volume": "1",
+        "author": "Ren",
+        "year": "2024",
+        "journal-title": "Earth Crit. Zone"
+      },
+      {
+        "key": "D5GC06782K/cit68/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "1251",
+        "DOI": "10.1016/j.energy.2016.08.060",
+        "volume": "114",
+        "author": "Pfenninger",
+        "year": "2016",
+        "journal-title": "Energy"
+      },
+      {
+        "key": "D5GC06782K/cit69/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "1224",
+        "DOI": "10.1016/j.energy.2016.08.068",
+        "volume": "114",
+        "author": "Staffell",
+        "year": "2016",
+        "journal-title": "Energy"
+      },
+      {
+        "issue": "1",
+        "key": "D5GC06782K/cit70/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "617",
+        "DOI": "10.1038/s41597-023-02526-z",
+        "volume": "10",
+        "author": "Adalibieke",
+        "year": "2023",
+        "journal-title": "Sci. Data"
+      },
+      {
+        "key": "D5GC06782K/cit71/1",
+        "volume-title": "Energy Prices Q1 2023 - Q1 2025",
+        "author": "Global Petrol Prices (GPP)",
+        "year": "2025",
+        "unstructured": "Global Petrol Prices (GPP) ,  Energy Prices Q1 2023 - Q1 2025 ,  2025 . Database last access 28/07/2025. Available from:  https://www.globalpetrolprices.com/"
+      },
+      {
+        "key": "D5GC06782K/cit72/1",
+        "volume-title": "Global Cost of equity and capital in US dollars - data updated on 05/01/2025",
+        "author": "Damodaran",
+        "year": "2025",
+        "unstructured": "A.Damodaran ,  Global Cost of equity and capital in US dollars - data updated on 05/01/2025 ,  2025 . Database last access 28/07/2025. Available from:  https://www.damodaran.com"
+      },
+      {
+        "issue": "5",
+        "key": "D5GC06782K/cit73/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "054050",
+        "DOI": "10.1088/1748-9326/ad428e",
+        "volume": "19",
+        "author": "Marconi",
+        "year": "2024",
+        "journal-title": "Environ. Res. Lett."
+      },
+      {
+        "key": "D5GC06782K/cit74/1",
+        "unstructured": "PriceWatch Analytics, 2025. Available from:  https://www.price-watch.ai/ . Accessed: July 2025"
+      },
+      {
+        "key": "D5GC06782K/cit75/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "116486",
+        "DOI": "10.1016/j.rser.2025.116486",
+        "volume": "226",
+        "author": "Mingolla",
+        "year": "2026",
+        "journal-title": "Renewable Sustainable Energy Rev."
+      },
+      {
+        "key": "D5GC06782K/cit76/1",
+        "volume-title": "Breaking new ground: decentralised renewable nitrogen fertilisers. Exploring opportunities and barriers",
+        "author": "Barrera",
+        "year": "2025",
+        "unstructured": "F.Barrera ,  C.Paul ,  L.Janke ,  E.Seubert ,  E.Colak ,  D.Tonelli  and  L.Rosa ,  Breaking new ground: decentralised renewable nitrogen fertilisers. Exploring opportunities and barriers ,  Agora Industry ,  2025 . Available from:  https://www.agora-industry.org/publications/breaking-new-ground-decentralised-renewable-nitrogen-fertilisers"
+      },
+      {
+        "key": "D5GC06782K/cit77/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "112311",
+        "DOI": "10.1016/j.rser.2022.112311",
+        "volume": "160",
+        "author": "Sacchi",
+        "year": "2022",
+        "journal-title": "Renewable Sustainable Energy Rev."
+      },
+      {
+        "issue": "6",
+        "key": "D5GC06782K/cit78/1",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.heliyon.2024.e27547",
+        "volume": "10",
+        "author": "Boyce",
+        "year": "2024",
+        "journal-title": "Heliyon"
+      },
+      {
+        "issue": "48",
+        "key": "D5GC06782K/cit79/1",
+        "doi-asserted-by": "publisher",
+        "first-page": "25817",
+        "DOI": "10.1021/acs.est.5c14489",
+        "volume": "59",
+        "author": "Rosa",
+        "year": "2025",
+        "journal-title": "Environ. Sci. Technol."
+      }
+    ],
+    "container-title": [
+      "Green Chemistry"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "http://pubs.rsc.org/en/content/articlepdf/2026/GC/D5GC06782K",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          2
+        ]
+      ],
+      "date-time": "2026-03-02T10:17:27Z",
+      "timestamp": 1772446647000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://xlink.rsc.org/?DOI=D5GC06782K"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    },
+    "references-count": 79,
+    "journal-issue": {
+      "issue": "9",
+      "published-print": {
+        "date-parts": [
+          [
+            2026,
+            3,
+            2
+          ]
+        ]
+      }
+    },
+    "URL": "https://doi.org/10.1039/d5gc06782k",
+    "relation": {
+      "has-review": [
+        {
+          "id-type": "doi",
+          "id": "10.1039/D5GC06782K/v1/review2",
+          "asserted-by": "object"
+        },
+        {
+          "id-type": "doi",
+          "id": "10.1039/D5GC06782K/v1/review1",
+          "asserted-by": "object"
+        },
+        {
+          "id-type": "doi",
+          "id": "10.1039/D5GC06782K/v2/review1",
+          "asserted-by": "object"
+        },
+        {
+          "id-type": "doi",
+          "id": "10.1039/D5GC06782K/v2/decision1",
+          "asserted-by": "object"
+        },
+        {
+          "id-type": "doi",
+          "id": "10.1039/D5GC06782K/v1/decision1",
+          "asserted-by": "object"
+        },
+        {
+          "id-type": "doi",
+          "id": "10.1039/D5GC06782K/v2/response1",
+          "asserted-by": "object"
+        }
+      ]
+    },
+    "ISSN": [
+      "1463-9262",
+      "1463-9270"
+    ],
+    "issn-type": [
+      {
+        "value": "1463-9262",
+        "type": "print"
+      },
+      {
+        "value": "1463-9270",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2026
+        ]
+      ]
+    }
+  }
+}

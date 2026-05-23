@@ -1,0 +1,6 @@
+Title: Flexible design and operation of off-grid green ammonia systems with gravity energy storage under long-term renewable power uncertainty
+Source: Applied Energy, 2025
+URL: https://www.sciencedirect.com/science/article/pii/S0306261925003599
+Expected: HTML
+Relevance: 长期不确定性、多场景、储能配置和离网绿氨调度。
+Download note: HTTP 403, 832787 bytes

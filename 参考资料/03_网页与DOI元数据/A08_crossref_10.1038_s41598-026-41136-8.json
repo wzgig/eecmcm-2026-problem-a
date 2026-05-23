@@ -1,0 +1,586 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          22
+        ]
+      ],
+      "date-time": "2026-04-22T00:44:16Z",
+      "timestamp": 1776818656161,
+      "version": "3.51.2"
+    },
+    "reference-count": 31,
+    "publisher": "Springer Science and Business Media LLC",
+    "issue": "1",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              3,
+              11
+            ]
+          ],
+          "date-time": "2026-03-11T00:00:00Z",
+          "timestamp": 1773187200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://creativecommons.org/licenses/by-nc-nd/4.0"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2026,
+              4,
+              22
+            ]
+          ],
+          "date-time": "2026-04-22T00:00:00Z",
+          "timestamp": 1776816000000
+        },
+        "content-version": "vor",
+        "delay-in-days": 42,
+        "URL": "https://creativecommons.org/licenses/by-nc-nd/4.0"
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "link.springer.com"
+      ],
+      "crossmark-restriction": false
+    },
+    "short-container-title": [
+      "Sci Rep"
+    ],
+    "DOI": "10.1038/s41598-026-41136-8",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          11
+        ]
+      ],
+      "date-time": "2026-03-11T14:48:38Z",
+      "timestamp": 1773240518000
+    },
+    "update-policy": "https://doi.org/10.1007/springer_crossmark_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 0,
+    "title": [
+      "Optimized scheduling of integrated energy systems: a multi-dimensional electricity, hydrogen, ammonia, heat synergy approach using the LSDBO-WOA algorithm"
+    ],
+    "prefix": "10.1038",
+    "volume": "16",
+    "author": [
+      {
+        "given": "Naiwei",
+        "family": "Tu",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Jinda",
+        "family": "Yang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Xin",
+        "family": "Yan",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Zuhao",
+        "family": "Fan",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "member": "297",
+    "published-online": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          11
+        ]
+      ]
+    },
+    "reference": [
+      {
+        "key": "41136_CR1",
+        "doi-asserted-by": "publisher",
+        "first-page": "1117",
+        "DOI": "10.1016/j.fmre.2023.03.020",
+        "volume": "5",
+        "author": "Y Hou",
+        "year": "2025",
+        "unstructured": "Hou, Y. et al. Probabilistic energy flow analysis of the integrated electricity and gas system considering multiform uncertainties. Fundament Res. 5, 1117–1133 (2025).",
+        "journal-title": "Fundament Res."
+      },
+      {
+        "key": "41136_CR2",
+        "first-page": "117",
+        "volume": "44",
+        "author": "J Lin",
+        "year": "2024",
+        "unstructured": "Lin, J., Yu, Z., Zhang, X. & Li, J. On-grid/off-grid operation mode and economic analysis of renewable power to ammonia system. Proc. CSEE. 44, 117–127 (2024).",
+        "journal-title": "Proc. CSEE"
+      },
+      {
+        "key": "41136_CR3",
+        "doi-asserted-by": "publisher",
+        "first-page": "46339",
+        "DOI": "10.1021/acsomega.4c07315",
+        "volume": "9",
+        "author": "L Luo",
+        "year": "2024",
+        "unstructured": "Luo, L., Huang, Z., Xu, Y., Zou, S. & Wu, B. Experimental study on the effect of ammonia on combustion and emission characteristics of a spark ignition engine fueled with hydrogen. ACS Omega. 9, 46339–46348 (2024).",
+        "journal-title": "ACS Omega"
+      },
+      {
+        "key": "41136_CR4",
+        "doi-asserted-by": "publisher",
+        "first-page": "e40727",
+        "DOI": "10.1016/j.heliyon.2024.e40727",
+        "volume": "10",
+        "author": "AM Yazdani",
+        "year": "2024",
+        "unstructured": "Yazdani, A. M., Salimi, M. & Amidpour, M. Techno-economic study of gas turbines with hydrogen, ammonia, and their mixture fuels. Heliyon 10, e40727 (2024).",
+        "journal-title": "Heliyon"
+      },
+      {
+        "key": "41136_CR5",
+        "doi-asserted-by": "publisher",
+        "first-page": "2843",
+        "DOI": "10.1021/acs.energyfuels.4c04626",
+        "volume": "39",
+        "author": "M Portarapillo",
+        "year": "2025",
+        "unstructured": "Portarapillo, M., Bellucci Sessa, A., Russo, D. & di Benedetto, A. Ammonia as a hydrogen carrier: energetic assessment of processes integrated with fuel cells for power generation. Energy Fuels. 39, 2843–2853 (2025).",
+        "journal-title": "Energy Fuels"
+      },
+      {
+        "key": "41136_CR6",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Cao, J., Diao, R., Zhang, J., Hua, W. & Dong, W. Multi-time scale optimization of agricultural energy internet considering coupling of electricity, heat, and ammonia. IEEE 8th Conf. Energy Internet Energy Syst. Integr. (EI2), 1696–1701 (2024). (2024).",
+        "DOI": "10.1109/EI264398.2024.10990356"
+      },
+      {
+        "key": "41136_CR7",
+        "doi-asserted-by": "publisher",
+        "first-page": "118785",
+        "DOI": "10.1016/j.enconman.2024.118785",
+        "volume": "315",
+        "author": "J Li",
+        "year": "2024",
+        "unstructured": "Li, J. et al. Jet ignition characteristics of ammonia-hydrogen passive pre-chamber: emphasis on equivalence ratio and hydrogen/ammonia ratio. Energy. Conv. Manag. 315, 118785 (2024).",
+        "journal-title": "Energy. Conv. Manag."
+      },
+      {
+        "key": "41136_CR8",
+        "unstructured": "Yuan, W. et al. Bi-level optimal scheduling of power-to-ammonia coupling wind-photovoltaic-thermal integrated energy system based on ammonia energy storage technology. Proc. CSEE 43, 6992–7002 (2023)."
+      },
+      {
+        "key": "41136_CR9",
+        "doi-asserted-by": "publisher",
+        "first-page": "1510",
+        "DOI": "10.1016/j.ijhydene.2024.09.131",
+        "volume": "87",
+        "author": "J Liu",
+        "year": "2024",
+        "unstructured": "Liu, J., Sang, L. & Xu, Y. Low carbon collaborative planning of integrated hydrogen-ammonia system and power distribution network. Int. J. Hydrogen Energy. 87, 1510–1521 (2024).",
+        "journal-title": "Int. J. Hydrogen Energy"
+      },
+      {
+        "key": "41136_CR10",
+        "doi-asserted-by": "publisher",
+        "first-page": "037301",
+        "DOI": "10.1063/5.0246643",
+        "volume": "17",
+        "author": "X Shi",
+        "year": "2025",
+        "unstructured": "Shi, X. et al. Optimal scheduling of electricity–hydrogen–ammonia coupled integrated energy system based on uncertain renewable generations. J. Renew. Sustain. Energy. 17, 037301 (2025).",
+        "journal-title": "J. Renew. Sustain. Energy"
+      },
+      {
+        "key": "41136_CR11",
+        "doi-asserted-by": "publisher",
+        "first-page": "e39585",
+        "DOI": "10.1016/j.heliyon.2024.e39585",
+        "volume": "10",
+        "author": "M Khani",
+        "year": "2024",
+        "unstructured": "Khani, M., Samiei Moghaddam, M., Noori, T. & Ebrahimi, R. Integrated energy management for enhanced grid flexibility: Optimizing renewable resources and energy storage systems across transmission and distribution networks. Heliyon 10, e39585 (2024).",
+        "journal-title": "Heliyon"
+      },
+      {
+        "key": "41136_CR12",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.35833/MPCE.2024.000606",
+        "author": "Z Chen",
+        "year": "2024",
+        "unstructured": "Chen, Z. et al. Multi-time-scale optimal scheduling of integrated energy system with electric-thermal-hydrogen hybrid energy storage under wind and solar uncertainties. J. Mod. Power Syst. Clean Energy https://doi.org/10.35833/MPCE.2024.000606 (2024).",
+        "journal-title": "J. Mod. Power Syst. Clean Energy"
+      },
+      {
+        "key": "41136_CR13",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s41598-025-96341-8",
+        "volume": "15",
+        "author": "M Ahmadi Kamarposhti",
+        "year": "2025",
+        "unstructured": "Ahmadi Kamarposhti, M. et al. Optimizing capacitor bank placement in distribution networks using a multi-objective particle swarm optimization approach for energy efficiency and cost reduction. Sci. Rep. 15, 12332 (2025).",
+        "journal-title": "Sci. Rep."
+      },
+      {
+        "key": "41136_CR14",
+        "doi-asserted-by": "publisher",
+        "first-page": "110691",
+        "DOI": "10.1016/j.isci.2024.110691",
+        "volume": "27",
+        "author": "L Li",
+        "year": "2024",
+        "unstructured": "Li, L., Sun, Y., Han, Y. & Chen, W. Seasonal hydrogen energy storage sizing: Two-stage economic-safety optimization for integrated energy systems in northwest China. iScience 27, 110691 (2024).",
+        "journal-title": "iScience"
+      },
+      {
+        "key": "41136_CR15",
+        "first-page": "157",
+        "volume": "44",
+        "author": "J Lai",
+        "year": "2023",
+        "unstructured": "Lai, J., Wen, X., Zhang, Q. & Wang, J. Capacity optimization configuration of DC microgrid based on improved sparrow search algorithm. Acta Energ. Solaris Sin. 44, 157–163 (2023).",
+        "journal-title": "Acta Energ. Solaris Sin."
+      },
+      {
+        "key": "41136_CR16",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s41598-025-02446-5",
+        "volume": "15",
+        "author": "Y Chen",
+        "year": "2025",
+        "unstructured": "Chen, Y., Ning, W. & Du, W. A study of scheduling strategies for microgrids based on the non-dominated sorting dung beetle optimization algorithm. Sci. Rep. 15, 17522 (2025).",
+        "journal-title": "Sci. Rep."
+      },
+      {
+        "key": "41136_CR17",
+        "doi-asserted-by": "publisher",
+        "first-page": "1462",
+        "DOI": "10.3390/electronics14071462",
+        "volume": "14",
+        "author": "T Xia",
+        "year": "2025",
+        "unstructured": "Xia, T. et al. Research on estimation optimization of state of charge of lithium-ion batteries based on Kalman filter algorithm. Electronics 14, 1462 (2025).",
+        "journal-title": "Electronics"
+      },
+      {
+        "key": "41136_CR18",
+        "first-page": "120",
+        "volume": "52",
+        "author": "X Zhao",
+        "year": "2024",
+        "unstructured": "Zhao, X., Wang, D. & Peng, H. Transformer fault diagnosis based on a multi-strategy improved dung beetle optimizer. Power Syst. Prot. Control 52, 120–130 (2024).",
+        "journal-title": "Power Syst. Prot. Control"
+      },
+      {
+        "key": "41136_CR19",
+        "first-page": "240",
+        "volume": "46",
+        "author": "L Zhong",
+        "year": "2025",
+        "unstructured": "Zhong, L. et al. Optimal capacity configuration method for multi-microgrid system utilizing wind-solar-electric-hydrogen hybrid energy storage. Power Gener Technol. 46, 240 (2025).",
+        "journal-title": "Power Gener Technol"
+      },
+      {
+        "key": "41136_CR20",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1038/s41598-025-09960-6",
+        "volume": "15",
+        "author": "W Aich",
+        "year": "2025",
+        "unstructured": "Aich, W. et al. Two-layer energy scheduling of electrical and thermal smart grids with energy hubs including renewable and storage units considering energy markets. Sci. Rep. 15, 25079 (2025).",
+        "journal-title": "Sci. Rep."
+      },
+      {
+        "key": "41136_CR21",
+        "first-page": "252",
+        "volume": "46",
+        "author": "J Zhang",
+        "year": "2025",
+        "unstructured": "Zhang, J., Peng, Y. & Sun, J. Two-stage robust optimization scheduling of park-level hydrogen-electric coupling systems with demand response and carbon trading. Power Gener Technol. 46, 252 (2025).",
+        "journal-title": "Power Gener Technol."
+      },
+      {
+        "key": "41136_CR22",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Ning, C. et al. Multi-stage distributionally robust scheduling with structured mixture ambiguity for hydrogen-based integrated energy systems: finite-sample guarantees and equivalent reformulations. IEEE Trans. Power Syst (2025).",
+        "DOI": "10.1109/TPWRS.2025.3614386"
+      },
+      {
+        "key": "41136_CR23",
+        "doi-asserted-by": "publisher",
+        "first-page": "136104",
+        "DOI": "10.1016/j.energy.2025.136104",
+        "volume": "325",
+        "author": "Y Zhou",
+        "year": "2025",
+        "unstructured": "Zhou, Y. et al. Data-driven distributionally robust stochastic optimal dispatching method of integrated energy system considering multiple uncertainties. Energy 325, 136104 (2025).",
+        "journal-title": "Energy"
+      },
+      {
+        "key": "41136_CR24",
+        "first-page": "42",
+        "volume": "37",
+        "author": "ZS Zeng",
+        "year": "2024",
+        "unstructured": "Zeng, Z. S., Zheng, J. Y. & Wei, X. Research on capacity optimization configuration of hydrogenammonia hybrid storage system in microgrid. Guangdong Electr. Power 37, 42–49 (2024).",
+        "journal-title": "Guangdong Electr. Power"
+      },
+      {
+        "key": "41136_CR25",
+        "first-page": "72",
+        "volume": "46",
+        "author": "Y Chen",
+        "year": "2025",
+        "unstructured": "Chen, Y. et al. Research on fault diagnosis method of photovoltaic arrays based on improved grey wolf algorithm optimized extreme learning machine. Power Gener Technol. 46, 72 (2025).",
+        "journal-title": "Power Gener Technol."
+      },
+      {
+        "key": "41136_CR26",
+        "first-page": "107",
+        "volume": "43",
+        "author": "L Xiang",
+        "year": "2023",
+        "unstructured": "Xiang, L. et al. Adaptability assessment of new energy connected to the power grid based on the carrying capacity. Proc. CSEE. 43, 107–113 (2023).",
+        "journal-title": "Proc. CSEE"
+      },
+      {
+        "key": "41136_CR27",
+        "doi-asserted-by": "publisher",
+        "first-page": "428",
+        "DOI": "10.1016/j.ijhydene.2024.07.396",
+        "volume": "82",
+        "author": "GA Mohammed",
+        "year": "2024",
+        "unstructured": "Mohammed, G. A. et al. Review on the ammonia-blend as an alternative fuel for micro gas turbine power generation. Int. J. Hydrogen Energy 82, 428–447 (2024).",
+        "journal-title": "Int. J. Hydrogen Energy"
+      },
+      {
+        "key": "41136_CR28",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.enconman.2024.118922",
+        "volume": "319",
+        "author": "S Yang",
+        "year": "2024",
+        "unstructured": "Yang, S. et al. Two-stage robust optimization scheduling for integrated energy systems considering ammonia energy and waste heat utilization. Energy Convers. Manage. 319, 118922 (2024).",
+        "journal-title": "Energy Convers. Manage."
+      },
+      {
+        "key": "41136_CR29",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.eswa.2025.127375",
+        "volume": "278",
+        "author": "G Xiong",
+        "year": "2025",
+        "unstructured": "Xiong, G. et al. Power system economic emission dispatch considering uncertainties of wind, solar, and small runoff hydropower via a hybrid multi-objective optimization algorithm. Expert Syst. Appl. 278, 127375 (2025).",
+        "journal-title": "Expert Syst. Appl."
+      },
+      {
+        "key": "41136_CR30",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.ijepes.2022.108600",
+        "volume": "145",
+        "author": "S Wu",
+        "year": "2023",
+        "unstructured": "Wu, S. et al. A two-stage rolling optimization strategy for park-level integrated energy system considering multi-energy flexibility. Int. J. Electr. Power Energy Syst. 145, 08600 (2023).",
+        "journal-title": "Int. J. Electr. Power Energy Syst."
+      },
+      {
+        "key": "41136_CR31",
+        "doi-asserted-by": "publisher",
+        "DOI": "10.1016/j.apenergy.2021.117559",
+        "volume": "304",
+        "author": "S Klyapovskiy",
+        "year": "2021",
+        "unstructured": "Klyapovskiy, S. et al. Optimal operation of the hydrogen-based energy management system with P2X demand response and ammonia plant. Appl. Energy 304, 117559 (2021).",
+        "journal-title": "Appl. Energy"
+      }
+    ],
+    "container-title": [
+      "Scientific Reports"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://www.nature.com/articles/s41598-026-41136-8",
+        "content-type": "text/html",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://www.nature.com/articles/s41598-026-41136-8.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://www.nature.com/articles/s41598-026-41136-8.pdf",
+        "content-type": "application/pdf",
+        "content-version": "vor",
+        "intended-application": "similarity-checking"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2026,
+          4,
+          21
+        ]
+      ],
+      "date-time": "2026-04-21T23:56:48Z",
+      "timestamp": 1776815808000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://www.nature.com/articles/s41598-026-41136-8"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          11
+        ]
+      ]
+    },
+    "references-count": 31,
+    "journal-issue": {
+      "issue": "1",
+      "published-online": {
+        "date-parts": [
+          [
+            2026,
+            12
+          ]
+        ]
+      }
+    },
+    "alternative-id": [
+      "41136"
+    ],
+    "URL": "https://doi.org/10.1038/s41598-026-41136-8",
+    "relation": {},
+    "ISSN": [
+      "2045-2322"
+    ],
+    "issn-type": [
+      {
+        "value": "2045-2322",
+        "type": "electronic"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          3,
+          11
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "18 January 2026",
+        "order": 1,
+        "name": "received",
+        "label": "Received",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "18 February 2026",
+        "order": 2,
+        "name": "accepted",
+        "label": "Accepted",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "value": "11 March 2026",
+        "order": 3,
+        "name": "first_online",
+        "label": "First Online",
+        "group": {
+          "name": "ArticleHistory",
+          "label": "Article History"
+        }
+      },
+      {
+        "order": 1,
+        "name": "Ethics",
+        "group": {
+          "name": "EthicsHeading",
+          "label": "Declarations"
+        }
+      },
+      {
+        "value": "The authors declare no competing interests.",
+        "order": 2,
+        "name": "Ethics",
+        "group": {
+          "name": "EthicsHeading",
+          "label": "Competing interests"
+        }
+      }
+    ],
+    "article-number": "13130"
+  }
+}

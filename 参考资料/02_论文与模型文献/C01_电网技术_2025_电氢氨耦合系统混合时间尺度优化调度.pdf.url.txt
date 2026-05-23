@@ -1,0 +1,6 @@
+Title: 考虑能量分配的电-氢-氨耦合系统多主体混合时间尺度优化调度
+Source: 乐生铜等，电网技术，2025
+URL: https://epjournal.csee.org.cn/en/article/doi/10.13335/j.1000-3673.pst.2024.1982/
+Local file: C01_电网技术_2025_电氢氨耦合系统混合时间尺度优化调度.pdf
+Status: downloaded_pdf_and_html
+Relevance: 中文电-氢-氨耦合系统、多主体、日前/日内混合时间尺度调度。

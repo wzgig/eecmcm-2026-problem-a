@@ -1,0 +1,6 @@
+Title: Optimising renewable generation configurations of off-grid green ammonia production systems considering Haber-Bosch flexibility
+Source: Energy Conversion and Management, 2023
+URL: https://www.sciencedirect.com/science/article/pii/S019689042300136X
+Expected: HTML
+Relevance: 离网风光绿氨、HB灵活性、电池/氢储能和容量配置。
+Download note: HTTP 403, 832787 bytes

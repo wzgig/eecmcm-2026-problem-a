@@ -1,0 +1,6 @@
+Title: Optimal scheduling of a large-scale power-to-ammonia process
+Source: Hochhaus et al., Computers & Chemical Engineering, 2023
+URL: https://www.sciencedirect.com/science/article/abs/pii/S0098135423000017
+Expected: HTML
+Relevance: PEM电解槽+HB，日前电价驱动的P2A调度。
+Download note: HTTP 403, 832787 bytes

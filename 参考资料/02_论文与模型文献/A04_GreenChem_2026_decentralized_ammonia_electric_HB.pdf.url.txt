@@ -1,0 +1,5 @@
+Title: Optimal design of decentralized ammonia production via electric Haber-Bosch systems
+Source: Rosa & Tonelli, Green Chemistry, 2026
+URL: https://pubs.rsc.org/en/content/articlepdf/2026/gc/d5gc06782k
+Expected: PDF
+Relevance: MILP/Pyomo式小时级自治、并网、混合供电氨生产设计。

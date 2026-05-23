@@ -1,0 +1,5 @@
+Title: 关于大力实施可再生能源替代行动的指导意见（发改能源〔2024〕1537号）
+Source: 国家发展改革委等
+URL: https://www.ndrc.gov.cn/xxgk/zcfb/tz/202410/t20241030_1394119.html
+Expected: HTML
+Relevance: 绿电直供、源网荷储、绿电园区、绿氢绿氨产业背景。

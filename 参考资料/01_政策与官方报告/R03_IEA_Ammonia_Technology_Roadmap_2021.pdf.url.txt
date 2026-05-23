@@ -1,0 +1,6 @@
+Title: Ammonia Technology Roadmap
+Source: International Energy Agency
+URL: https://iea.blob.core.windows.net/assets/6ee41bb9-8e81-4b64-8701-2acc064ff6e4/AmmoniaTechnologyRoadmap.pdf
+Local file: R03_IEA_Ammonia_Technology_Roadmap_2021.pdf
+Status: downloaded_manual_pdf
+Relevance: 合成氨行业减排路线、氢氨产业政策建议。

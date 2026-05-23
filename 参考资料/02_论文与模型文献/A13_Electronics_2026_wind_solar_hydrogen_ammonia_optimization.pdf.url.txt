@@ -1,0 +1,6 @@
+Title: Operational Optimization of Wind-Solar-Hydrogen-Ammonia Multi-Energy Systems Considering Demand Response and Source-Load Uncertainty
+Source: Electronics, 2026
+URL: https://www.mdpi.com/2079-9292/15/4/795/pdf
+Expected: PDF
+Relevance: 风光氢氨多能系统、需求响应、源荷不确定性优化。
+Download note: HTTP 403, 406 bytes

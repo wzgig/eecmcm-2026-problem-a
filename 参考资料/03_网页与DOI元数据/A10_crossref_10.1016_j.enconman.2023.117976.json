@@ -1,0 +1,814 @@
+{
+  "status": "ok",
+  "message-type": "work",
+  "message-version": "1.0.0",
+  "message": {
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          5,
+          14
+        ]
+      ],
+      "date-time": "2026-05-14T23:09:03Z",
+      "timestamp": 1778800143218,
+      "version": "3.51.4"
+    },
+    "reference-count": 41,
+    "publisher": "Elsevier BV",
+    "license": [
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2024-01-01T00:00:00Z",
+          "timestamp": 1704067200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/tdm/userlicense/1.0/"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2024-01-01T00:00:00Z",
+          "timestamp": 1704067200000
+        },
+        "content-version": "tdm",
+        "delay-in-days": 0,
+        "URL": "https://www.elsevier.com/legal/tdmrep-license"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2024-01-01T00:00:00Z",
+          "timestamp": 1704067200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-017"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2024-01-01T00:00:00Z",
+          "timestamp": 1704067200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-037"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2024-01-01T00:00:00Z",
+          "timestamp": 1704067200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-012"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2024-01-01T00:00:00Z",
+          "timestamp": 1704067200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-029"
+      },
+      {
+        "start": {
+          "date-parts": [
+            [
+              2024,
+              1,
+              1
+            ]
+          ],
+          "date-time": "2024-01-01T00:00:00Z",
+          "timestamp": 1704067200000
+        },
+        "content-version": "stm-asf",
+        "delay-in-days": 0,
+        "URL": "https://doi.org/10.15223/policy-004"
+      }
+    ],
+    "funder": [
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "22022816"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "22022816"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100001809",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      },
+      {
+        "DOI": "10.13039/501100001809",
+        "name": "National Natural Science Foundation of China",
+        "doi-asserted-by": "publisher",
+        "award": [
+          "22078358"
+        ],
+        "award-info": [
+          {
+            "award-number": [
+              "22078358"
+            ]
+          }
+        ],
+        "id": [
+          {
+            "id": "10.13039/501100001809",
+            "id-type": "DOI",
+            "asserted-by": "publisher"
+          }
+        ]
+      }
+    ],
+    "content-domain": {
+      "domain": [
+        "elsevier.com",
+        "sciencedirect.com"
+      ],
+      "crossmark-restriction": true
+    },
+    "short-container-title": [
+      "Energy Conversion and Management"
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2024,
+          1
+        ]
+      ]
+    },
+    "DOI": "10.1016/j.enconman.2023.117976",
+    "type": "journal-article",
+    "created": {
+      "date-parts": [
+        [
+          2023,
+          12,
+          14
+        ]
+      ],
+      "date-time": "2023-12-14T16:58:25Z",
+      "timestamp": 1702573105000
+    },
+    "page": "117976",
+    "update-policy": "https://doi.org/10.1016/elsevier_cm_policy",
+    "source": "Crossref",
+    "is-referenced-by-count": 31,
+    "special_numbering": "C",
+    "title": [
+      "Research on design and multi-frequency scheduling optimization method for flexible green ammonia system"
+    ],
+    "prefix": "10.1016",
+    "volume": "300",
+    "author": [
+      {
+        "given": "Yan",
+        "family": "Wu",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Tingting",
+        "family": "Zhao",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Shuo",
+        "family": "Tang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Yufei",
+        "family": "Wang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Mingyan",
+        "family": "Ma",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "member": "78",
+    "reference": [
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0005",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.enconman.2022.115513",
+        "article-title": "Energy, environment, and economic analyses on a novel hydrogen production method by electrified steam methane reforming with renewable energy accommodation",
+        "volume": "258",
+        "author": "Song",
+        "year": "2022",
+        "journal-title": "Energ Conver Manage"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0010",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.energy.2023.127304",
+        "article-title": "The spillover effects among fossil fuel, renewables and carbon markets: Evidence under the dual dilemma of climate change and energy crises",
+        "volume": "274",
+        "author": "Su",
+        "year": "2023",
+        "journal-title": "Energy"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0015",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.apenergy.2023.121212",
+        "article-title": "Multi-objective distributionally robust optimization for hydrogen-involved total renewable energy CCHP planning under source-load uncertainties",
+        "volume": "342",
+        "author": "Wang",
+        "year": "2023",
+        "journal-title": "Appl Energy"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0020",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.apenergy.2023.121411",
+        "article-title": "Renewable energy: Moderated, moderating or mediating?",
+        "volume": "347",
+        "author": "Akan",
+        "year": "2023",
+        "journal-title": "Appl Energy"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0025",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.rser.2023.113195",
+        "article-title": "Methanol and ammonia as emerging green fuels: Evaluation of a new power generation paradigm",
+        "volume": "175",
+        "author": "Blanco",
+        "year": "2023",
+        "journal-title": "Renew Sustain Energy Rev"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0030",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.enconman.2022.116261",
+        "article-title": "Hybrid renewable energy system for sustainable residential buildings based on solar dish stirling and wind turbine with hydrogen production",
+        "volume": "270",
+        "author": "Allouhi",
+        "year": "2022",
+        "journal-title": "Energ Conver Manage"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0035",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.enconman.2022.115593",
+        "article-title": "Neural network genetic algorithm optimization of a transient hybrid renewable energy system with solar/wind and hydrogen storage system for zero energy buildings at various climate conditions",
+        "volume": "260",
+        "author": "Izadi",
+        "year": "2022",
+        "journal-title": "Energ Conver Manage"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0040",
+        "doi-asserted-by": "crossref",
+        "first-page": "23",
+        "DOI": "10.1016/j.rser.2015.12.223",
+        "article-title": "Solar–wind hybrid renewable energy system: A review",
+        "volume": "58",
+        "author": "Khare",
+        "year": "2016",
+        "journal-title": "Renew Sustain Energy Rev"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0045",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.energy.2023.127386",
+        "article-title": "Performance evaluation of wind-solar-hydrogen system for renewable energy generation and green hydrogen generation and storage: Energy, exergy, economic, and enviroeconomic",
+        "volume": "276",
+        "author": "Liu",
+        "year": "2023",
+        "journal-title": "Energy"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0050",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.enconman.2022.116432",
+        "article-title": "MXene-based phase change materials for solar thermal energy storage",
+        "volume": "273",
+        "author": "Solangi",
+        "year": "2022",
+        "journal-title": "Energ Conver Manage"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0055",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.enconman.2020.112670",
+        "article-title": "A review of mechanical energy storage systems combined with wind and solar applications",
+        "volume": "210",
+        "author": "Mahmoud",
+        "year": "2020",
+        "journal-title": "Energ Conver Manage"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0060",
+        "doi-asserted-by": "crossref",
+        "first-page": "162",
+        "DOI": "10.1016/j.enconman.2019.04.064",
+        "article-title": "Renewable hybrid system size optimization considering various electrochemical energy storage technologies",
+        "volume": "193",
+        "author": "Kaabeche",
+        "year": "2019",
+        "journal-title": "Energ Conver Manage"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0065",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.enconman.2020.112784",
+        "article-title": "Introducing a hybrid mechanical – Chemical energy storage system: Process development and energy/exergy analysis",
+        "volume": "211",
+        "author": "Mehrpooya",
+        "year": "2020",
+        "journal-title": "Energ Conver Manage"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0070",
+        "doi-asserted-by": "crossref",
+        "first-page": "207",
+        "DOI": "10.1016/j.rser.2015.01.049",
+        "article-title": "Power to liquid and power to gas: An option for the German Energiewende",
+        "volume": "45",
+        "author": "Varone",
+        "year": "2015",
+        "journal-title": "Renew Sustain Energy Rev"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0075",
+        "doi-asserted-by": "crossref",
+        "first-page": "348",
+        "DOI": "10.1016/j.apenergy.2017.03.132",
+        "article-title": "Optimization and integration of hybrid renewable energy hydrogen fuel cell energy systems – A critical review",
+        "volume": "202",
+        "author": "Eriksson",
+        "year": "2017",
+        "journal-title": "Appl Energy"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0080",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.enconman.2023.116826",
+        "article-title": "Optimisation of multi-period renewable energy systems with hydrogen and battery energy storage: A P-graph approach",
+        "volume": "281",
+        "author": "Ji",
+        "year": "2023",
+        "journal-title": "Energ Conver Manage"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0085",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.enconman.2022.116594",
+        "article-title": "Recent progress in green ammonia: Production, applications, assessment; barriers, and its role in achieving the sustainable development goals",
+        "volume": "277",
+        "author": "Olabi",
+        "year": "2023",
+        "journal-title": "Energ Conver Manage"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0090",
+        "article-title": "Feasibility study of power-to-gas as simultaneous renewable energy storage and CO2 utilization: Direction toward economic viability of synthetic methane production",
+        "volume": "57",
+        "author": "Choe",
+        "year": "2023",
+        "journal-title": "Sustainable Energy Technol Assess"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0095",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.adapen.2021.100050",
+        "article-title": "Methanol as a renewable energy carrier: An assessment of production and transportation costs for selected global locations",
+        "volume": "3",
+        "author": "Schorn",
+        "year": "2021",
+        "journal-title": "Advances in Applied Energy"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0100",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.apenergy.2020.116170",
+        "article-title": "Global potential of green ammonia based on hybrid PV-wind power plants",
+        "volume": "294",
+        "author": "Fasihi",
+        "year": "2021",
+        "journal-title": "Appl Energy"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0105",
+        "doi-asserted-by": "crossref",
+        "first-page": "325",
+        "DOI": "10.1016/j.jclepro.2017.12.279",
+        "article-title": "Optimal renewable production of ammonia from water and air",
+        "volume": "178",
+        "author": "Sánchez",
+        "year": "2018",
+        "journal-title": "J Clean Prod"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0110",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.enconman.2023.116790",
+        "article-title": "Optimising renewable generation configurations of off-grid green ammonia production systems considering Haber-Bosch flexibility",
+        "volume": "280",
+        "author": "Wang",
+        "year": "2023",
+        "journal-title": "Energ Conver Manage"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.enconman.2023.117976_b0115",
+        "doi-asserted-by": "crossref",
+        "first-page": "91",
+        "DOI": "10.1016/S0038-092X(98)00108-X",
+        "article-title": "Techno-economic analysis of a 10 MWe solar thermal power plant using ammonia -Based thermochemical energy storage",
+        "volume": "66",
+        "author": "Luzzi",
+        "year": "1999",
+        "journal-title": "Sol Energy"
+      },
+      {
+        "issue": "2",
+        "key": "10.1016/j.enconman.2023.117976_b0120",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1115/1.4037534",
+        "article-title": "Heat transfer and thermodynamic analyses of a novel solid–gas thermochemical strontium chloride–ammonia thermal energy storage system",
+        "volume": "140",
+        "author": "Al-Zareer",
+        "year": "2017",
+        "journal-title": "J Heat Transfer"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0125",
+        "doi-asserted-by": "crossref",
+        "first-page": "1620",
+        "DOI": "10.1002/aic.15660",
+        "article-title": "Conceptual design of ammonia-based energy storage system: System design and time-invariant performance",
+        "volume": "63",
+        "author": "Wang",
+        "year": "2017",
+        "journal-title": "AIChE J"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0130",
+        "doi-asserted-by": "crossref",
+        "unstructured": "Salmon, N. and R. Bañares-Alcántara, Sector Coupling of Green Ammonia Production to Australia’s Electricity Grid, in Computer Aided Chemical Engineering, Y. Yamashita and M. Kano, Editors. 2022, Elsevier. p. 1903-1908.",
+        "DOI": "10.1016/B978-0-323-85159-6.50317-1"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0135",
+        "doi-asserted-by": "crossref",
+        "first-page": "466",
+        "DOI": "10.1016/j.apenergy.2016.09.026",
+        "article-title": "Coupling solid oxide electrolyser (SOE) and ammonia production plant",
+        "volume": "192",
+        "author": "Cinti",
+        "year": "2017",
+        "journal-title": "Appl Energy"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0140",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.enconman.2019.111809",
+        "article-title": "Thermodynamic assessment of an integrated renewable energy multigeneration system including ammonia as hydrogen carrier and phase change material energy storage",
+        "volume": "198",
+        "author": "Shahid",
+        "year": "2019",
+        "journal-title": "Energ Conver Manage"
+      },
+      {
+        "issue": "90",
+        "key": "10.1016/j.enconman.2023.117976_b0145",
+        "doi-asserted-by": "crossref",
+        "first-page": "38361",
+        "DOI": "10.1016/j.ijhydene.2022.09.007",
+        "article-title": "A bifunctional electrochemical flow cell integrating ammonia production and electricity generation for renewable energy conversion and storage",
+        "volume": "47",
+        "author": "Pan",
+        "year": "2022",
+        "journal-title": "Int J Hydrogen Energy"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0150",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.rser.2019.109339",
+        "article-title": "Islanded ammonia power systems: Technology review & conceptual process design",
+        "volume": "114",
+        "author": "Rouwenhorst",
+        "year": "2019",
+        "journal-title": "Renew Sustain Energy Rev"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0155",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.jclepro.2020.121627",
+        "article-title": "Scaling the production of renewable ammonia: A techno-economic optimization applied in regions with high insolation",
+        "volume": "271",
+        "author": "Osman",
+        "year": "2020",
+        "journal-title": "J Clean Prod"
+      },
+      {
+        "issue": "3",
+        "key": "10.1016/j.enconman.2023.117976_b0160",
+        "doi-asserted-by": "crossref",
+        "first-page": "851",
+        "DOI": "10.1016/j.ejor.2014.08.039",
+        "article-title": "Combined scheduling and capacity planning of electricity-based ammonia production to integrate renewable energies",
+        "volume": "241",
+        "author": "Schulte Beerbühl",
+        "year": "2015",
+        "journal-title": "Eur J Oper Res"
+      },
+      {
+        "issue": "43",
+        "key": "10.1016/j.enconman.2023.117976_b0165",
+        "doi-asserted-by": "crossref",
+        "first-page": "14607",
+        "DOI": "10.1021/acs.iecr.8b02447",
+        "article-title": "“Green” ammonia: Impact of renewable energy intermittency on plant sizing and levelized cost of ammonia",
+        "volume": "57",
+        "author": "Nayak-Luke",
+        "year": "2018",
+        "journal-title": "Ind Eng Chem Res"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0170",
+        "doi-asserted-by": "crossref",
+        "first-page": "5",
+        "DOI": "10.1016/j.cherd.2017.10.010",
+        "article-title": "Optimal scheduling for wind-powered ammonia generation: Effects of key design parameters",
+        "volume": "131",
+        "author": "Allman",
+        "year": "2018",
+        "journal-title": "Chem Eng Res Des"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0175",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.segy.2023.100113",
+        "article-title": "Scheduling power-to-ammonia plants considering uncertainty and periodicity of electricity prices",
+        "volume": "11",
+        "author": "Wang",
+        "year": "2023",
+        "journal-title": "Smart Energy"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0180",
+        "doi-asserted-by": "crossref",
+        "first-page": "11",
+        "DOI": "10.1016/j.cep.2019.04.005",
+        "article-title": "A novel system for ammonia-based sustainable energy and agriculture: Concept and design optimization",
+        "volume": "140",
+        "author": "Palys",
+        "year": "2019",
+        "journal-title": "Chem Eng Process"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0185",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.apenergy.2023.121140",
+        "article-title": "Co-optimization of decarbonized operation of coal-fired power plants and seasonal storage based on green ammonia co-firing",
+        "volume": "341",
+        "author": "Zhao",
+        "year": "2023",
+        "journal-title": "Appl Energy"
+      },
+      {
+        "issue": "8",
+        "key": "10.1016/j.enconman.2023.117976_b0190",
+        "doi-asserted-by": "crossref",
+        "first-page": "5485",
+        "DOI": "10.1016/j.rser.2012.06.014",
+        "article-title": "Optimization of wind turbine micrositing: A comparative study",
+        "volume": "16",
+        "author": "Rajper",
+        "year": "2012",
+        "journal-title": "Renew Sustain Energy Rev"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0195",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.energy.2020.119103",
+        "article-title": "A techno-economic assessment of hybrid energy systems in rural Pakistan",
+        "volume": "215",
+        "author": "Ali",
+        "year": "2021",
+        "journal-title": "Energy"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0200",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.apenergy.2022.119573",
+        "article-title": "Integrated sizing and scheduling of an off-grid integrated energy system for an isolated renewable energy hydrogen refueling station",
+        "volume": "323",
+        "author": "Pang",
+        "year": "2022",
+        "journal-title": "Appl Energy"
+      },
+      {
+        "key": "10.1016/j.enconman.2023.117976_b0205",
+        "doi-asserted-by": "crossref",
+        "DOI": "10.1016/j.compchemeng.2021.107543",
+        "article-title": "Optimal design of a cooperated energy storage system to balance intermittent renewable energy and fluctuating demands of hydrogen and oxygen in refineries",
+        "volume": "155",
+        "author": "Wang",
+        "year": "2021",
+        "journal-title": "Comput Chem Eng"
+      }
+    ],
+    "container-title": [
+      "Energy Conversion and Management"
+    ],
+    "original-title": [],
+    "language": "en",
+    "link": [
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0196890423013225?httpAccept=text/xml",
+        "content-type": "text/xml",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      },
+      {
+        "URL": "https://api.elsevier.com/content/article/PII:S0196890423013225?httpAccept=text/plain",
+        "content-type": "text/plain",
+        "content-version": "vor",
+        "intended-application": "text-mining"
+      }
+    ],
+    "deposited": {
+      "date-parts": [
+        [
+          2024,
+          5,
+          2
+        ]
+      ],
+      "date-time": "2024-05-02T13:21:22Z",
+      "timestamp": 1714656082000
+    },
+    "score": 1,
+    "resource": {
+      "primary": {
+        "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0196890423013225"
+      }
+    },
+    "subtitle": [],
+    "short-title": [],
+    "issued": {
+      "date-parts": [
+        [
+          2024,
+          1
+        ]
+      ]
+    },
+    "references-count": 41,
+    "alternative-id": [
+      "S0196890423013225"
+    ],
+    "URL": "https://doi.org/10.1016/j.enconman.2023.117976",
+    "relation": {},
+    "ISSN": [
+      "0196-8904"
+    ],
+    "issn-type": [
+      {
+        "value": "0196-8904",
+        "type": "print"
+      }
+    ],
+    "subject": [],
+    "published": {
+      "date-parts": [
+        [
+          2024,
+          1
+        ]
+      ]
+    },
+    "assertion": [
+      {
+        "value": "Elsevier",
+        "name": "publisher",
+        "label": "This article is maintained by"
+      },
+      {
+        "value": "Research on design and multi-frequency scheduling optimization method for flexible green ammonia system",
+        "name": "articletitle",
+        "label": "Article Title"
+      },
+      {
+        "value": "Energy Conversion and Management",
+        "name": "journaltitle",
+        "label": "Journal Title"
+      },
+      {
+        "value": "https://doi.org/10.1016/j.enconman.2023.117976",
+        "name": "articlelink",
+        "label": "CrossRef DOI link to publisher maintained version"
+      },
+      {
+        "value": "article",
+        "name": "content_type",
+        "label": "Content Type"
+      },
+      {
+        "value": "© 2023 Elsevier Ltd. All rights reserved.",
+        "name": "copyright",
+        "label": "Copyright"
+      }
+    ],
+    "article-number": "117976"
+  }
+}

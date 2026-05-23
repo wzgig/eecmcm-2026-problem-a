@@ -1,0 +1,6 @@
+Title: Coordinated energy management strategy for multi-energy hub with power-to-ammonia
+Source: Xiong et al., Renewable Energy, 2023
+URL: https://www.sciencedirect.com/science/article/pii/S0960148123006703
+Expected: HTML
+Relevance: 多能枢纽P2A、成本/碳排协调调度。
+Download note: HTTP 403, 832787 bytes

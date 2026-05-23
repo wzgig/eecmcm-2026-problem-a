@@ -1,0 +1,5 @@
+Title: 关于有序推动多用户绿电直连发展有关事项的通知（发改能源〔2026〕688号）
+Source: 国家发展改革委/国家能源局
+URL: https://www.ndrc.gov.cn/xxgk/zcfb/tz/202605/t20260520_1405313.html
+Expected: HTML
+Relevance: 题面绿电直连指标和多用户园区政策依据；明确绿色氢氨醇优先支持。

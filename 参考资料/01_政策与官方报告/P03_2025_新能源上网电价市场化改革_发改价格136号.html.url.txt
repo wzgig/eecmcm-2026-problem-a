@@ -1,0 +1,5 @@
+Title: 关于深化新能源上网电价市场化改革 促进新能源高质量发展的通知（发改价格〔2025〕136号）
+Source: 国家发展改革委/国家能源局
+URL: https://www.ndrc.gov.cn/xxgk/zcfb/tz/202502/t20250209_1396066.html
+Expected: HTML
+Relevance: 售电电价、市场交易和余电上网收益建模依据。

@@ -1,0 +1,6 @@
+Title: Research on design and multi-frequency scheduling optimization method for flexible green ammonia system
+Source: Energy Conversion and Management, 2024
+URL: https://www.sciencedirect.com/science/article/pii/S0196890423013225
+Expected: HTML
+Relevance: 柔性绿氨系统设计和多频率调度优化。
+Download note: HTTP 403, 832787 bytes

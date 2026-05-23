@@ -1,0 +1,6 @@
+Title: Global Hydrogen Review 2025
+Source: International Energy Agency
+URL: https://iea.blob.core.windows.net/assets/12d92ecc-e960-40f3-aff5-b2de6690ab6b/GlobalHydrogenReview2025.pdf
+Local file: R01_IEA_Global_Hydrogen_Review_2025.pdf
+Status: downloaded_manual_pdf
+Relevance: 全球氢能项目、低排放氢、绿氨需求和政策背景。

@@ -1,0 +1,6 @@
+Title: Basic Strategy for Hydrogen, revised 2023
+Source: METI Japan
+URL: https://www.meti.go.jp/shingikai/enecho/shoene_shinene/suiso_seisaku/pdf/20230606_5.pdf
+Expected: PDF
+Relevance: 日本氢氨战略、燃料氨和产业链政策参考。
+Download note: ReadTimeout(ReadTimeoutError("HTTPSConnectionPool(host='www.meti.go.jp', port=443): Read timed out. (read timeout=60)"))

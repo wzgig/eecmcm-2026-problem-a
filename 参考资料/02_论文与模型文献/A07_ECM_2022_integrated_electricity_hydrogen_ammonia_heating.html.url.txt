@@ -1,0 +1,6 @@
+Title: Flexible operation strategy of an integrated renewable multi-generation system for electricity, hydrogen, ammonia, and heating
+Source: Du & Aziz, Energy Conversion and Management, 2022
+URL: https://www.sciencedirect.com/science/article/pii/S019689042101342X
+Expected: HTML
+Relevance: 风光-电-氢-氨-热联供动态仿真，小时级调度。
+Download note: HTTP 403, 832787 bytes

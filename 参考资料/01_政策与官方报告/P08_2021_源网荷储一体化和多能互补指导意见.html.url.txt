@@ -1,0 +1,5 @@
+Title: 关于推进电力源网荷储一体化和多能互补发展的指导意见（发改能源规〔2021〕280号）
+Source: 国家发展改革委/国家能源局
+URL: https://www.gov.cn/zhengce/zhengceku/2021-03/06/content_5590895.htm
+Expected: HTML
+Relevance: 源网荷储、多能互补和园区协同优化背景。

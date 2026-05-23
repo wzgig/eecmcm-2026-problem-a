@@ -1,0 +1,5 @@
+Title: 国家能源局综合司关于组织开展能源领域氢能试点工作的通知（国能综通科技〔2025〕91号）
+Source: 国家能源局
+URL: https://www.nea.gov.cn/20250610/472b12c43f534aab9a95de81034dcd92/20250610472b12c43f534aab9a95de81034dcd92_2288580504e06346d39eb8d268c8e70947.pdf
+Expected: PDF
+Relevance: 先进柔性离网制氢、氢氨燃料供电供能、氢储能试点依据。

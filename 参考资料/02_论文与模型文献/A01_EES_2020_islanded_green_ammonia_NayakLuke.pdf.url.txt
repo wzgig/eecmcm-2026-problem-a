@@ -1,0 +1,5 @@
+Title: Techno-economic viability of islanded green ammonia as a carbon-free energy vector and as a substitute for conventional production
+Source: Nayak-Luke & Bañares-Alcántara, Energy & Environmental Science, 2020
+URL: https://pubs.rsc.org/en/content/articlepdf/2020/ee/d0ee01707h
+Expected: PDF
+Relevance: 风光-电解槽-Haber-Bosch-储氢离网绿氨；LCOA和容量配置。

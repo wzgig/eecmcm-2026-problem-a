@@ -1,0 +1,6 @@
+Title: Optimal capacity and multi-stable flexible operation strategy of green ammonia systems: Adapting to fluctuations in renewable energy
+Source: Energy Conversion and Management, 2024
+URL: https://www.sciencedirect.com/science/article/abs/pii/S0196890424005631
+Expected: HTML
+Relevance: 绿氨容量配置和多稳态柔性运行，应对可再生波动。
+Download note: HTTP 403, 832787 bytes

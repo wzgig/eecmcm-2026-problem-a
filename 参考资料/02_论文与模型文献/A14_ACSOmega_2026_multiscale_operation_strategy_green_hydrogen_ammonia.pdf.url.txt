@@ -1,0 +1,6 @@
+Title: Multiscale Operation Strategy of the Green Hydrogen-Ammonia System Driven by Wind-Solar Hybrid Energy
+Source: ACS Omega, 2026
+URL: https://pubs.acs.org/doi/pdf/10.1021/acsomega.5c12043
+Expected: PDF
+Relevance: 风光驱动绿氢氨系统，多尺度调度与制氨响应。
+Download note: HTTP 403, 5926 bytes

@@ -1,0 +1,5 @@
+Title: Optimized scheduling of integrated energy systems: electricity, hydrogen, ammonia, heat synergy
+Source: Scientific Reports, 2026
+URL: https://www.nature.com/articles/s41598-026-41136-8.pdf
+Expected: PDF
+Relevance: 电-氢-氨-热协同，随机/机会约束和启发式求解。
