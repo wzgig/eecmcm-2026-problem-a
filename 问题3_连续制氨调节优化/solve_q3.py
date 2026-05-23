@@ -15,11 +15,13 @@ from model_common.data import SystemParams, load_typical_day, load_wind_solar_sc
 from model_common.metrics import add_process_load, q1_summary
 from model_common.plotting import (
     plot_q3_cost_duration_curve,
+    plot_q3_cost_delta_heatmaps,
     plot_q3_grid_indicator_compare,
     plot_q3_q2_cost_compare,
     plot_q3_satisfaction_stacked,
     plot_q3_scenario_cost_box,
     plot_q3_typical_load_factor,
+    plot_q3_typical_load_factor_lines,
     plot_q3_typical_power_balance,
 )
 
@@ -496,11 +498,14 @@ def main() -> None:
     write_markdown_summary(typical_summary, annual, distribution, compare)
 
     plot_q3_typical_load_factor(typical_hourly, OUT_DIR)
+    plot_q3_typical_load_factor_lines(typical_hourly, OUT_DIR)
     plot_q3_q2_cost_compare(compare, OUT_DIR)
     plot_q3_grid_indicator_compare(compare, OUT_DIR)
     plot_q3_scenario_cost_box(scenario_summary, OUT_DIR, PRODUCTION_LEVELS_T)
     plot_q3_satisfaction_stacked(annual, OUT_DIR)
     plot_q3_cost_duration_curve(scenario_summary, OUT_DIR, PRODUCTION_LEVELS_T, SCENARIO_DAYS)
+    q2_scenario_summary = pd.read_csv(Q2_OUT_DIR / "q2_all_scenario_summary.csv")
+    plot_q3_cost_delta_heatmaps(q2_scenario_summary, scenario_summary, OUT_DIR, PRODUCTION_LEVELS_T)
 
     typical_full = typical_summary[typical_summary["satisfaction_type"] == "全满足"]
     selected = typical_full.loc[typical_full["吨氨成本"].idxmin()] if not typical_full.empty else typical_summary.loc[typical_summary["吨氨成本"].idxmin()]

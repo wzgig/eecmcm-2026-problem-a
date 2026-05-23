@@ -13,7 +13,7 @@ if str(PROJECT_ROOT) not in sys.path:
 
 from model_common.data import SystemParams, load_typical_day, load_wind_solar_scenarios
 from model_common.metrics import get_metric, q1_summary
-from model_common.plotting import CSEE_COLORS, save_figure, set_csee_style
+from model_common.plotting import CSEE_COLORS, annotate_bars, legend_below, save_figure, set_csee_style
 
 
 OUT_DIR = Path(__file__).resolve().parent / "outputs"
@@ -267,7 +267,7 @@ def plot_typical_schedule(typical_hourly: pd.DataFrame) -> None:
     set_csee_style()
     pivot = typical_hourly.pivot_table(index="production_t_per_day", columns="hour", values="production_on", aggfunc="first")
     pivot = pivot.sort_index(ascending=False)
-    fig, ax = plt.subplots(figsize=(7.4, 3.6))
+    fig, ax = plt.subplots(figsize=(7.4, 3.8))
     ax.imshow(pivot.values, cmap=plt.cm.Greens, aspect="auto", vmin=0, vmax=1)
     ax.set_yticks(np.arange(len(pivot.index)))
     ax.set_yticklabels([f"{int(v)}" for v in pivot.index])
@@ -279,7 +279,7 @@ def plot_typical_schedule(typical_hourly: pd.DataFrame) -> None:
         for j in range(pivot.shape[1]):
             if pivot.values[i, j] > 0.5:
                 ax.text(j, i, "1", ha="center", va="center", fontsize=6, color="white")
-    fig.tight_layout(pad=0.8)
+    fig.subplots_adjust(left=0.10, right=0.98, top=0.88, bottom=0.16)
     save_figure(fig, OUT_DIR / "q2_fig1_typical_schedule_heatmap_csee")
     plt.close(fig)
 
@@ -288,13 +288,15 @@ def plot_typical_cost_indicator(typical_summary: pd.DataFrame) -> None:
     set_csee_style()
     df = typical_summary.sort_values("production_t_per_day", ascending=True)
     x = np.arange(len(df))
-    fig, ax1 = plt.subplots(figsize=(7.2, 4.2))
-    ax1.bar(x, df["吨氨成本"], color=CSEE_COLORS["light_blue"], edgecolor=CSEE_COLORS["blue"], linewidth=0.6, label="吨氨成本")
+    fig, ax1 = plt.subplots(figsize=(7.5, 4.8))
+    bars = ax1.bar(x, df["吨氨成本"], color=CSEE_COLORS["light_blue"], edgecolor=CSEE_COLORS["blue"], linewidth=0.6, label="吨氨成本")
     ax1.set_ylabel("吨氨成本/(元/t)")
     ax1.set_xticks(x)
     ax1.set_xticklabels([f"{int(v)}" for v in df["production_t_per_day"]])
     ax1.set_xlabel("日产量/t")
+    ax1.set_ylim(0, df["吨氨成本"].max() * 1.18)
     ax1.grid(True, axis="y", linestyle="--", alpha=0.4)
+    annotate_bars(ax1, bars, fmt="{:.0f}", dy_frac=0.01)
 
     ax2 = ax1.twinx()
     ax2.plot(x, df["新能源自发自用比例（物理/政策口径）"] * 100, marker="o", color=CSEE_COLORS["green"], label="自发自用比例")
@@ -307,9 +309,18 @@ def plot_typical_cost_indicator(typical_summary: pd.DataFrame) -> None:
 
     handles1, labels1 = ax1.get_legend_handles_labels()
     handles2, labels2 = ax2.get_legend_handles_labels()
-    ax1.legend(handles1 + handles2, labels1 + labels2, frameon=False, ncol=2, loc="upper center")
+    ax1.legend(
+        handles1 + handles2,
+        labels1 + labels2,
+        frameon=False,
+        ncol=4,
+        loc="upper center",
+        bbox_to_anchor=(0.5, -0.18),
+        borderaxespad=0,
+        columnspacing=1.1,
+    )
     ax1.set_title("典型风光场景下吨氨成本与绿电指标")
-    fig.tight_layout(pad=0.8)
+    fig.subplots_adjust(left=0.10, right=0.90, top=0.88, bottom=0.24)
     save_figure(fig, OUT_DIR / "q2_fig2_typical_cost_indicator_csee")
     plt.close(fig)
 
@@ -318,7 +329,7 @@ def plot_scenario_cost_box(scenario_summary: pd.DataFrame) -> None:
     set_csee_style()
     ordered = sorted(PRODUCTION_LEVELS_T)
     data = [scenario_summary.loc[scenario_summary["production_t_per_day"] == d, "吨氨成本"] for d in ordered]
-    fig, ax = plt.subplots(figsize=(7.2, 4.2))
+    fig, ax = plt.subplots(figsize=(7.4, 4.4))
     bp = ax.boxplot(data, tick_labels=[str(d) for d in ordered], patch_artist=True, widths=0.58)
     for patch in bp["boxes"]:
         patch.set_facecolor(CSEE_COLORS["light_blue"])
@@ -327,7 +338,7 @@ def plot_scenario_cost_box(scenario_summary: pd.DataFrame) -> None:
     ax.set_ylabel("吨氨成本/(元/t)")
     ax.set_title("24种风光场景下吨氨成本分布")
     ax.grid(True, axis="y", linestyle="--", alpha=0.4)
-    fig.tight_layout(pad=0.8)
+    fig.subplots_adjust(left=0.11, right=0.98, top=0.88, bottom=0.15)
     save_figure(fig, OUT_DIR / "q2_fig3_scenario_cost_box_csee")
     plt.close(fig)
 
@@ -336,7 +347,7 @@ def plot_satisfaction_stacked(annual: pd.DataFrame) -> None:
     set_csee_style()
     df = annual.sort_values("production_t_per_day", ascending=True)
     x = np.arange(len(df))
-    fig, ax = plt.subplots(figsize=(7.2, 4.0))
+    fig, ax = plt.subplots(figsize=(7.4, 4.4))
     ax.bar(x, df["full_satisfied_days"], color=CSEE_COLORS["green"], label="全满足")
     ax.bar(x, df["partial_satisfied_days"], bottom=df["full_satisfied_days"], color="#f7c97f", label="部分满足")
     bottom = df["full_satisfied_days"] + df["partial_satisfied_days"]
@@ -346,16 +357,16 @@ def plot_satisfaction_stacked(annual: pd.DataFrame) -> None:
     ax.set_xlabel("日产量/t")
     ax.set_ylabel("年度代表天数/d")
     ax.set_title("24场景年度绿电指标合格类型统计")
-    ax.legend(frameon=False, ncol=3, loc="upper center")
+    legend_below(ax, ncol=3, y=-0.20)
     ax.grid(True, axis="y", linestyle="--", alpha=0.4)
-    fig.tight_layout(pad=0.8)
+    fig.subplots_adjust(left=0.10, right=0.98, top=0.88, bottom=0.24)
     save_figure(fig, OUT_DIR / "q2_fig4_satisfaction_stacked_csee")
     plt.close(fig)
 
 
 def plot_cost_duration_curve(scenario_summary: pd.DataFrame) -> None:
     set_csee_style()
-    fig, ax = plt.subplots(figsize=(7.2, 4.2))
+    fig, ax = plt.subplots(figsize=(7.4, 4.5))
     for production in sorted(PRODUCTION_LEVELS_T, reverse=True):
         vals = np.sort(scenario_summary.loc[scenario_summary["production_t_per_day"] == production, "吨氨成本"].to_numpy())
         x = np.arange(1, len(vals) + 1) * SCENARIO_DAYS
@@ -365,8 +376,8 @@ def plot_cost_duration_curve(scenario_summary: pd.DataFrame) -> None:
     ax.set_title("全年代表场景吨氨成本分布曲线")
     ax.set_xlim(0, 360)
     ax.grid(True, linestyle="--", alpha=0.4)
-    ax.legend(frameon=False, ncol=3)
-    fig.tight_layout(pad=0.8)
+    legend_below(ax, ncol=5, y=-0.20)
+    fig.subplots_adjust(left=0.11, right=0.98, top=0.88, bottom=0.24)
     save_figure(fig, OUT_DIR / "q2_fig5_annual_cost_duration_csee")
     plt.close(fig)
 
@@ -378,7 +389,7 @@ def plot_purchase_sale_distribution(scenario_summary: pd.DataFrame) -> None:
     purchase = [df.loc[df["production_t_per_day"] == d, "网购电量"] for d in levels]
     sale = [df.loc[df["production_t_per_day"] == d, "上网电量"] for d in levels]
     x = np.arange(len(levels))
-    fig, ax = plt.subplots(figsize=(7.2, 4.2))
+    fig, ax = plt.subplots(figsize=(7.4, 4.4))
     bp1 = ax.boxplot(purchase, positions=x - 0.16, widths=0.26, patch_artist=True)
     bp2 = ax.boxplot(sale, positions=x + 0.16, widths=0.26, patch_artist=True)
     for patch in bp1["boxes"]:
@@ -392,10 +403,57 @@ def plot_purchase_sale_distribution(scenario_summary: pd.DataFrame) -> None:
     ax.set_xlabel("日产量/t")
     ax.set_ylabel("日电量/MWh")
     ax.set_title("24场景日购电量与上网电量分布")
-    ax.legend([bp1["boxes"][0], bp2["boxes"][0]], ["网购电量", "上网电量"], frameon=False, loc="upper center", ncol=2)
+    ax.legend(
+        [bp1["boxes"][0], bp2["boxes"][0]],
+        ["网购电量", "上网电量"],
+        frameon=False,
+        loc="upper center",
+        bbox_to_anchor=(0.5, -0.18),
+        ncol=2,
+        borderaxespad=0,
+    )
     ax.grid(True, axis="y", linestyle="--", alpha=0.4)
-    fig.tight_layout(pad=0.8)
+    fig.subplots_adjust(left=0.10, right=0.98, top=0.88, bottom=0.24)
     save_figure(fig, OUT_DIR / "q2_fig6_purchase_sale_box_csee")
+    plt.close(fig)
+
+
+def plot_scenario_cost_heatmaps(scenario_summary: pd.DataFrame) -> None:
+    set_csee_style()
+    levels = sorted(PRODUCTION_LEVELS_T, reverse=True)
+    vmin = float(scenario_summary["吨氨成本"].min())
+    vmax = float(scenario_summary["吨氨成本"].max())
+    fig, axes = plt.subplots(2, 3, figsize=(8.8, 5.4), sharex=True, sharey=True)
+    axes_flat = axes.ravel()
+    image = None
+    for ax, production in zip(axes_flat, levels):
+        matrix = (
+            scenario_summary.loc[scenario_summary["production_t_per_day"] == production]
+            .pivot_table(index="wind_scenario", columns="pv_scenario", values="吨氨成本", aggfunc="first")
+            .sort_index()
+        )
+        image = ax.imshow(matrix.values, cmap="YlGnBu", vmin=vmin, vmax=vmax, aspect="auto")
+        ax.set_title(f"{production} t/d", fontsize=9)
+        ax.set_xticks(np.arange(matrix.shape[1]))
+        ax.set_xticklabels([str(int(c)) for c in matrix.columns])
+        ax.set_yticks(np.arange(matrix.shape[0]))
+        ax.set_yticklabels([str(int(i)) for i in matrix.index])
+        for i in range(matrix.shape[0]):
+            for j in range(matrix.shape[1]):
+                value = matrix.values[i, j]
+                text_color = "white" if (value - vmin) / (vmax - vmin) > 0.62 else "#222222"
+                ax.text(j, i, f"{value / 1000:.1f}", ha="center", va="center", fontsize=6.5, color=text_color)
+    axes_flat[-1].axis("off")
+    for ax in axes[:, 0]:
+        ax.set_ylabel("风电场景")
+    for ax in axes[-1, :2]:
+        ax.set_xlabel("光伏场景")
+    if image is not None:
+        cbar = fig.colorbar(image, ax=axes_flat[:-1], orientation="vertical", fraction=0.026, pad=0.018)
+        cbar.set_label("吨氨成本/(元/t)")
+    fig.suptitle("离散开停模式下24场景吨氨成本热力图（格内为千元/t）", y=0.985, fontsize=10)
+    fig.subplots_adjust(left=0.08, right=0.90, top=0.90, bottom=0.10, wspace=0.14, hspace=0.26)
+    save_figure(fig, OUT_DIR / "q2_fig7_scenario_cost_heatmap_csee")
     plt.close(fig)
 
 
@@ -422,6 +480,7 @@ def main() -> None:
     plot_satisfaction_stacked(annual)
     plot_cost_duration_curve(scenario_summary)
     plot_purchase_sale_distribution(scenario_summary)
+    plot_scenario_cost_heatmaps(scenario_summary)
 
     print("Typical summary:")
     print(typical_summary[["production_t_per_day", "required_on_hours", "吨氨成本", "新能源自发自用比例（物理/政策口径）", "总用电量绿电比例", "新能源上网电量比例", "satisfaction_type", "on_hours"]].to_string(index=False))

@@ -15,6 +15,7 @@ from model_common.plotting import (
     plot_q1_components,
     plot_q1_cost_breakdown,
     plot_q1_indicator_bars,
+    plot_q1_net_exchange,
     plot_q1_power_balance,
 )
 
@@ -89,6 +90,7 @@ def main() -> None:
     plot_q1_components(hourly, OUT_DIR)
     plot_q1_indicator_bars(summary, OUT_DIR)
     plot_q1_cost_breakdown(summary, OUT_DIR)
+    plot_q1_net_exchange(hourly, OUT_DIR)
 
     print(summary.to_string(index=False))
     print(f"\nOutputs written to: {OUT_DIR}")
