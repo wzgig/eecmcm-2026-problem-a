@@ -1,0 +1,9 @@
+﻿check,value
+no_storage_offgrid_power_balance_max_abs_mw,7.105427357601002e-15
+storage_offgrid_power_balance_max_abs_mw,7.105427357601002e-15
+storage_soc_min_mwh,-0.0
+storage_soc_max_mwh,5.0
+storage_capacity_mwh,5.0
+storage_charge_discharge_simultaneous_max_mw2,6.352850814850234e-14
+grid_purchase_sale_simultaneous_max_mw2,4.166433491548104e-11
+storage_soc_dynamic_max_abs_mwh,6.661338147750939e-15

@@ -1,0 +1,3 @@
+﻿target,description,wind_capacity_mw,pv_capacity_mw,total_capacity_mw,wind_capacity_multiple,pv_capacity_multiple,total_capacity_multiple_vs_current,minimum_hourly_margin_mw
+min_total_capacity_unconstrained_mix,不固定风光比例、以总装机最小为目标,1156.3056300268097,0.0,1156.3056300268097,28.907640750670243,0.0,11.1183233656424,0.0
+fixed_current_wind_pv_ratio,保持当前40MW风电与64MW光伏比例,1156.3056300268097,1850.0890080428956,3006.3946380697053,28.907640750670243,28.907640750670243,28.907640750670243,0.0
