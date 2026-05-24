@@ -10,6 +10,8 @@
 \usepackage{float}
 \usepackage{hyperref}
 \usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,shapes.geometric,calc,backgrounds}
 
 \geometry{left=2.55cm,right=2.55cm,top=2.55cm,bottom=2.55cm}
 \setlength{\parindent}{2em}
@@ -36,6 +38,38 @@
 \newcommand{\Rself}{R^{self}}
 \newcommand{\Rgreen}{R^{green}}
 \newcommand{\Rsell}{R^{sell}}
+
+\definecolor{flowGreen}{HTML}{2F6B4F}
+\definecolor{flowBlue}{HTML}{2F5597}
+\definecolor{flowTeal}{HTML}{00838F}
+\definecolor{flowOrange}{HTML}{C46A1A}
+\definecolor{flowRed}{HTML}{A63D40}
+\definecolor{flowPurple}{HTML}{6A4C93}
+\definecolor{flowYellow}{HTML}{B38B00}
+\definecolor{flowGray}{HTML}{5F6B73}
+
+\tikzset{
+  flowArrow/.style={-{Stealth[length=2.1mm,width=1.5mm]}, line width=0.65pt, draw=flowGray},
+  flowDash/.style={flowArrow,dashed},
+  flowBi/.style={<->,>=Stealth,line width=0.65pt,draw=flowGray},
+  flowBox/.style={rounded corners=2pt, very thick, align=center, inner sep=4pt, font=\scriptsize},
+  inputBox/.style={flowBox, draw=flowGray!85!black, fill=flowGray!8},
+  policyBox/.style={flowBox, draw=flowRed!85!black, fill=flowRed!7},
+  sourceBox/.style={flowBox, draw=flowGreen!85!black, fill=flowGreen!8},
+  loadBox/.style={flowBox, draw=flowOrange!85!black, fill=flowOrange!8},
+  gridBox/.style={flowBox, draw=flowBlue!85!black, fill=flowBlue!8},
+  storageBox/.style={flowBox, draw=flowPurple!85!black, fill=flowPurple!7},
+  algoBox/.style={flowBox, draw=flowTeal!85!black, fill=flowTeal!7},
+  moduleBox/.style={flowBox, draw=flowBlue!85!black, fill=flowBlue!7},
+  checkBox/.style={flowBox, draw=flowYellow!85!black, fill=flowYellow!12},
+  groupBox/.style={draw=flowGray!35, fill=flowGray!4, rounded corners=3pt, inner sep=6pt},
+  panelBox/.style={draw=flowGray!28, fill=flowGray!3, rounded corners=6pt, inner sep=6pt},
+  figureTitle/.style={font=\small\bfseries, text=flowBlue},
+  laneTitle/.style={font=\scriptsize\bfseries, text=flowGray},
+  metricTag/.style={rounded corners=7pt, draw=flowGray!45, fill=white, align=center, inner sep=3pt, font=\scriptsize},
+  resultTag/.style={rounded corners=7pt, draw=flowTeal!60!black, fill=flowTeal!7, align=center, inner sep=3pt, font=\scriptsize},
+  smallNote/.style={align=center, font=\scriptsize, text=flowGray, inner sep=2pt}
+}
 
 \begin{document}
 
@@ -70,7 +104,7 @@
 
 \vspace{0.4em}
 \noindent\textbf{摘要：}
-绿电直连模式通过新能源电源与高载能产业负荷直接耦合，可促进新能源就近消纳并推动化工行业低碳转型，但风光出力波动与制氢制氨负荷之间的时序错配会引发购电、上网、弃电和系统备用成本等问题。针对绿电直连型电氢氨园区优化运行问题，本文建立了从刚性基准、离散开停、连续调节到离网储能配置的小时级优化模型，并进一步基于计算结果分析绿电直连高渗透对电力系统的影响。
+绿电直连模式通过新能源电源与高载能产业负荷直接耦合，可促进新能源就近消纳并推动化工行业低碳转型，但风光出力波动与制氢制氨负荷之间的时序错配会引发购电、上网、弃电和系统备用成本等问题。针对绿电直连型电氢氨园区优化运行问题，本文构建“政策指标--工艺负荷--储能配置--电网支撑价值--政策建议”的闭环分析框架，建立从刚性基准、离散开停、连续调节到离网储能配置的小时级优化模型，并进一步基于计算结果分析绿电直连高渗透对电力系统的影响。
 
 首先，针对典型日刚性满负荷运行，建立并网功率平衡、三项绿电指标和题面成本口径下的吨氨成本模型。结果表明，典型日新能源自发自用比例为64.08\%，总用电量绿电比例为69.21\%，均满足要求；但新能源上网比例为35.92\%，超过20\%约束，说明固定负荷难以主动匹配风光出力。其次，扩容至72 t/d后，构建离散开停机模型，并用边际成本排序法求解。典型场景下，若要求三项绿电指标全部满足，54 t/d为最低成本可行方案，吨氨成本为4591.27元/t；24场景年度统计显示，降低日产量虽可降本，但会提高上网比例并削弱绿电指标合规性。进一步地，建立连续制氨负荷率混合整数线性规划模型，引入购售电互斥约束以避免非物理套利。连续调节使36 t/d方案较离散开停降本284.35元/t，并将全年全满足代表天数由0天提高至165天，表明柔性负荷可显著改善源荷时序匹配。
 
@@ -99,6 +133,17 @@
 五个问题构成逐步增加系统柔性的递进链条。问题一不进行优化，作为刚性满负荷运行基准，用于识别源荷错配和指标不达标环节。问题二在扩容后引入离散开停机变量，通过选择生产时段改善经济性和消纳指标。问题三进一步将开停机模式放宽为连续负荷率调节，并引入购售电互斥约束，量化柔性负荷价值。问题四切换到离网运行，删除购售电变量，引入储能和缺供变量，用于评价完全依赖风光时的可靠性与成本。问题五不再新增调度优化变量，而是将前四问结果组织为证据矩阵，讨论绿电直连对外部电力系统和政策机制的影响。
 
 从数学结构看，问题一是确定性核算模型；问题二由于缺少启停成本和爬坡约束，可转化为边际成本排序问题；问题三和问题四涉及连续变量与二进制互斥变量，采用混合整数线性规划求解；问题五则是基于模型输出的证据化政策分析。本文由此形成“指标核算--运行优化--储能配置--系统影响”的完整分析框架。
+
+本文的主要创新和工作量体现在四个方面。第一，将绿电直连三项政策指标嵌入所有并网调度问题，而不是只在典型日作事后核算；第二，在同一72 t/d扩容设备和同一24场景权重下比较离散开停与连续负荷率调节，量化制氨负荷柔性的边际价值；第三，在离网模型中同时刻画储能SOC、弃风弃光、常规负荷缺供和储能容量扫描，区分5 MWh经济方案、80 MWh低弃电方案和155 MWh零弃电方案；第四，用并网同产量与离网储能的单位成本差定义公共电网支撑价值，并将前四问结果转化为问题五的证据矩阵和政策建议。
+
+图\ref{fig:framework_flow}以“源--荷--储--网--氨”的能量耦合为主线，概括本文从风光时序波动、园区柔性调节到五问递进建模的总体逻辑：前端由风光资源和常规负荷形成源荷错配，中端通过制氢制氨负荷、储能和电网交换提供调节手段，后端将成本、绿电指标和电网支撑价值回收为政策证据链。
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.96\textwidth]{figure_candidates/image2_bitmap/image2_04_policy_evidence_chain_cn.png}
+  \caption{绿电直连型电氢氨园区模型证据、系统影响与政策机制关系}
+\label{fig:framework_flow}
+\end{figure}
 
 \section{模型假设}
 
@@ -179,6 +224,39 @@ LCOA=\frac{C}{M^{\NHthree}}.
 \]
 本文的$LCOA$均为题面成本口径下的比较成本，不代表包含全部固定投资的工程全寿命平准化成本。
 
+\subsection{求解算法与可复现流程}
+
+所有计算均由Python脚本直接读取题面附件生成，未手工录入中间结果。问题一通过逐小时功率平衡直接核算；问题二利用边际成本排序得到离散开停机全局最优时段；问题三调用\texttt{scipy.optimize.milp}建立连续负荷率与购售电互斥的混合整数线性规划；问题四分别构造无储能离网规则调度、含储能MILP、容量扫描、并网同产量MILP和满产能源自治容量线性规划；问题五读取前四问CSV输出并形成证据矩阵、政策依据矩阵和建议矩阵。模型计算后的CSV、Markdown摘要和图件均写入各问\texttt{outputs}目录，附录列出复现入口和主要结果文件。
+
+为保证数值可信性，脚本设置三类自动检查：一是功率平衡、日产量、年度权重和SOC闭环误差检查；二是购电/上网互斥、储能充/放电互斥检查；三是所有论文数字均与CSV摘要表交叉核对。问题三和问题四的最大平衡误差均处于$10^{-14}$量级，说明MILP求解结果满足数值精度要求。
+
+\begin{table}[H]
+\centering
+\caption{五问模型、求解模块与输出结果对应关系}
+\label{tab:model_algorithm_map}
+\small
+\begin{tabular}{p{0.10\textwidth}p{0.27\textwidth}p{0.25\textwidth}p{0.25\textwidth}}
+\toprule
+问题 & 模型核心 & 求解模块 & 主要输出\\
+\midrule
+Q1 & 典型日功率平衡、三项绿电指标、吨氨成本 & 逐小时确定性核算，复杂度$O(24)$ & 小时级购售电、指标表、成本分项、功率平衡图\\
+Q2 & 离散开停机0-1模型，固定开机小时数 & 边际成本排序，等价于特殊0-1线性规划 & 典型开机时段、24场景年度成本和合格天数\\
+Q3 & 连续负荷率MILP，购售电互斥 & SciPy HiGHS，每个场景和日产量独立求解 & Q2/Q3成本、购售电、指标和合格天数对比\\
+Q4 & 离网储能MILP，SOC闭环、弃电和缺供 & 无储能规则调度、储能容量扫描、并网同产量MILP & 储能Pareto、离网/并网成本、公网支撑价值\\
+Q5 & 系统影响指标和证据矩阵 & 读取前四问CSV自动生成政策证据链 & E1--E8证据、政策依据矩阵、六条建议\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+上述五问在代码实现上采用“统一数据入口--公共指标口径--分问题求解--自动校验--论文输出”的闭环流程。图\ref{fig:algorithm_flow}给出了脚本化复现链条，强调附件数据、公共函数、五问求解脚本、CSV结果、论文图表和最终PDF之间的可追溯关系。
+
+\begin{figure}[H]
+  \centering
+  \makebox[\textwidth][c]{\includegraphics[width=1.08\textwidth]{figure_candidates/image2_bitmap/image2_05_algorithm_flow_cn.png}}
+  \caption{算法与论文逻辑流程}
+\label{fig:algorithm_flow}
+\end{figure}
+
 \section{问题一：典型日刚性满负荷运行指标核算}
 
 \subsection{模型建立}
@@ -191,6 +269,8 @@ P^{buy}_t=\max(P^L_t+20.75-P^{re}_t,0),
 P^{sell}_t=\max(P^{re}_t-P^L_t-20.75,0).
 \]
 随后按统一绿电指标和成本模型计算典型日结果。
+
+问题一不含优化变量，其作用是建立后续各问的基准核算口径。脚本同时输出两类自发自用复核量：主口径$E^{self}=E^{re}-E^{sell}$与负荷侧校验量$E^{load}-E^{buy}$二者一致；题面括号公式$E^{load}-E^{sell}-E^{buy}$单独保留为复核列，不参与主结论。这样既保持物理含义清晰，也避免后续问题在并网和离网指标之间混用口径。
 
 \subsection{结果分析}
 
@@ -269,6 +349,8 @@ G_{s,t}(P)=1000\left[c^{buy}_t\max(P-P^{re}_{s,t},0)-c^{sell}\max(P^{re}_{s,t}-P
 \]
 将24个小时的$\Delta C_{s,t}$从小到大排序，选择前$H_D$个时段开机即可得到全局最优解。
 
+该排序法成立的关键在于，题目未给出启停成本、最小开停时间和爬坡率，时段之间除总开机小时数外没有耦合约束。风电和光伏发电成本对同一场景而言为常数，生产运维成本在开机小时内线性叠加，因此总成本可拆成24个小时边际成本之和。对每个场景和日产量，只需排序一次即可精确求解，计算复杂度为$O(|T|\log|T|)$；24个场景和5个日产量构成120个相互独立的小问题，便于复现和并行扩展。
+
 \subsection{求解结果}
 
 典型风光场景结果见表\ref{tab:q2_typical}。若只看成本，36 t/d方案最低；若要求三项绿电指标全部满足，54 t/d方案是最低成本可行方案，吨氨成本为4591.27元/t。
@@ -292,7 +374,14 @@ G_{s,t}(P)=1000\left[c^{buy}_t\max(P-P^{re}_{s,t},0)-c^{sell}\max(P^{re}_{s,t}-P
 \end{tabular}
 \end{table}
 
-24场景年度加权结果见表\ref{tab:q2_annual}。日产量越低，吨氨成本越低，但年上网电量显著增加，导致全满足天数下降。
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.82\textwidth]{fig08_q2_typical_cost_indicator.pdf}
+  \caption{离散开停机下典型场景日产量、吨氨成本和绿电指标权衡}
+  \label{fig:q2_typical_cost_indicator}
+\end{figure}
+
+图\ref{fig:q2_typical_cost_indicator}进一步说明，离散调节的最低成本点并不等于政策合规点。36 t/d通过减少高成本开机小时降低吨氨成本，但其自发自用比例和上网比例均偏离合规要求；54 t/d在成本、产能利用率和三项绿电指标之间取得较好折中。24场景年度加权结果见表\ref{tab:q2_annual}。日产量越低，吨氨成本越低，但年上网电量显著增加，导致全满足天数下降。
 
 \begin{table}[H]
 \centering
@@ -344,7 +433,7 @@ P^{sell}_{s,D,t}\le M(1-b_{s,D,t}).
 \[
 \min C_{s,D}=C^w_s+C^{pv}_s+C^{buy}_{s,D}+C^{om}_{s,D}-I^{sell}_{s,D}.
 \]
-该模型为小规模混合整数线性规划，本文采用SciPy HiGHS求解。
+该模型为小规模混合整数线性规划，本文采用SciPy HiGHS求解。对每个场景和日产量，模型含24个负荷率变量、24个购电变量、24个上网变量和24个购售电互斥二进制变量，共96个变量；约束包括24个功率平衡约束、1个日产量约束和48个购售电互斥约束。由于120个场景--日产量组合彼此独立，该模型在计算上稳定且可复核。脚本对结果自动检查功率平衡、日产量约束、负荷率上下限和购售电互斥，最大功率平衡误差为$1.42\times10^{-14}$ MW。
 
 \subsection{结果与对比}
 
@@ -403,7 +492,14 @@ P^{sell}_{s,D,t}\le M(1-b_{s,D,t}).
   \label{fig:q2q3_grid}
 \end{figure}
 
-72 t/d因全天满负荷运行，连续模型没有调节自由度，结果与离散模型一致。中低日产量下，连续负荷率可在风光富余或电价较低时提高负荷，在风光不足或电价较高时降低负荷，从而同步减少购电和上网。
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.78\textwidth]{fig09_q3_satisfaction_stacked.pdf}
+  \caption{连续调节下24场景年度绿电指标合格类型统计}
+  \label{fig:q3_satisfaction}
+\end{figure}
+
+72 t/d因全天满负荷运行，连续模型没有调节自由度，结果与离散模型一致。中低日产量下，连续负荷率可在风光富余或电价较低时提高负荷，在风光不足或电价较高时降低负荷，从而同步减少购电和上网。图\ref{fig:q3_satisfaction}显示，连续调节不仅降低成本，还显著改变合格类型分布：45 t/d方案全满足天数由问题二的15天提升至240天，36 t/d方案由0天提升至165天，说明柔性负荷的价值主要体现为小时级源荷匹配能力，而不仅是运行成本下降。
 
 \section{问题四：离网运行与储能配置优化}
 
@@ -454,6 +550,8 @@ E_{s,t}=(1-\rho)E_{s,t-1}+\eta^{ch}P^{ch}_{s,t}
 C^{bat,d}=\frac{1000E^{cap}_{kWh}}{15\times360}.
 \]
 
+该目标函数不是把缺供、产氨和弃电简单相加，而是用足够大的权重模拟工程调度优先级：常规负荷缺供首先被强惩罚，随后最大化绿氨产量，最后在同等产量下减少弃电和储能无效循环。储能模型含负荷率、开机状态、充电、放电、SOC、弃电、缺供和充放电模式变量，采用日内SOC闭环处理代表日循环。求解后脚本复核离网功率平衡、SOC动态、SOC上下界和充放电互斥；有储能离网功率平衡最大误差为$7.11\times10^{-15}$ MW，SOC动态最大误差为$6.66\times10^{-15}$ MWh。
+
 \subsection{储能容量配置与Pareto权衡}
 
 首先针对无储能弃电最大的场景$W4\_PV1$进行0--300 MWh容量扫描，主经济方案选择能够提高无储能日产氨量的正储能容量中吨氨成本最低者。为避免将储能配置压缩为单点结论，进一步采用$\varepsilon$约束：
@@ -483,7 +581,14 @@ C^{bat,d}=\frac{1000E^{cap}_{kWh}}{15\times360}.
 \end{tabular}
 \end{table}
 
-最大弃电场景的储能Pareto结果见表\ref{tab:q4_pareto}和图\ref{fig:q4_pareto}。5 MWh是经济方案，但不是消纳最优方案；若要求弃电率不超过10\%，需80 MWh；若要求零弃电，需155 MWh，吨氨成本升至4290.85元/t。
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.82\textwidth]{fig10_q4_storage_capacity_scan.pdf}
+  \caption{最大弃电场景储能容量扫描与边际收益递减}
+  \label{fig:q4_capacity_scan}
+\end{figure}
+
+图\ref{fig:q4_capacity_scan}显示，储能容量增加后弃电量下降、日产氨量提高，但吨氨成本并非单调下降。小容量储能优先消除关键时段缺供并搬移少量富余风光，边际收益较高；容量继续增大后，新增储能主要服务于降低弃电率，投资折算成本逐渐超过边际产氨收益。最大弃电场景的储能Pareto结果见表\ref{tab:q4_pareto}和图\ref{fig:q4_pareto}。5 MWh是经济方案，但不是消纳最优方案；若要求弃电率不超过10\%，需80 MWh；若要求零弃电，需155 MWh，吨氨成本升至4290.85元/t。
 
 \begin{table}[H]
 \centering
@@ -531,7 +636,16 @@ v^{grid}=4046.47-3310.66=735.81\ \text{元/t}.
 
 \subsection{证据矩阵构建}
 
-问题五不再建立新的调度模型，而是从前四问提取数值证据，形成“模型依据--系统影响--政策含义”的分析链条。核心证据见表\ref{tab:q5_evidence}。
+问题五不再建立新的调度模型，而是从前四问提取数值证据，形成“模型依据--系统影响--政策含义”的分析链条。设园区与公共电网的交换功率为
+\[
+P^{ex}_{t}=P^{buy}_{t}-P^{sell}_{t},
+\]
+则高渗透后区域聚合交换功率为$P^{EX}_{t}=\sum_iP^{ex}_{i,t}$。因此，绿电直连项目不能只按年净电量评价，还应关注交换功率峰谷差、反送时段、购售电总量、柔性负荷削减购售电的能力以及公共电网支撑价值。本文用
+\[
+\Delta E^{buy}=E^{buy,discrete}-E^{buy,continuous},\quad
+\Delta E^{sell}=E^{sell,discrete}-E^{sell,continuous}
+\]
+度量连续调节相对离散开停的电网交换改善，用$v^{grid}$度量并网模式相对离网自平衡的系统支撑价值。核心证据见表\ref{tab:q5_evidence}。
 
 \begin{table}[H]
 \centering
@@ -569,19 +683,60 @@ E8 & Q4 & 5 MWh为经济方案，80 MWh满足弃电率不超过10\%，155 MWh零
 
 据此提出六条建议：建立小时级绿电溯源与分表计量制度；将上网比例、最大交换功率和反送时段纳入运行考核；把柔性负荷能力作为准入、评价和补偿对象；建立储能配置的经济性、弃电率和可靠性多目标评估；完善并网型项目的输配电费、系统运行费、备用和辅助服务费用分担机制；推进风光氢氨醇一体化与弱联网示范。
 
+这些建议均对应前四问的定量证据：小时级溯源对应问题一“同日购电与上网并存”的现象；柔性负荷补偿对应问题三购售电同步削减和全满足天数提升；储能多目标评价对应问题四经济容量与零弃电容量的分离；系统费用分担对应735.81元/t的公共电网支撑价值。因此，问题五不是独立政策论述，而是由运行模型反推监管指标、市场机制和工程准入规则。
+
+\begin{table}[H]
+\centering
+\caption{政策建议与模型证据对应关系}
+\label{tab:policy_recommendation_matrix}
+\scriptsize
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.23\textwidth}>{\raggedright\arraybackslash}p{0.32\textwidth}>{\raggedright\arraybackslash}p{0.32\textwidth}}
+\toprule
+建议 & 模型依据 & 预期作用\\
+\midrule
+小时级绿电溯源与分表计量 & Q1同日购电172.04 MWh、上网216.77 MWh；Q3低产量上网比例35.76\% & 避免年累计电量掩盖小时错配，提升绿电认证可信度\\
+上网比例与最大交换功率联合考核 & Q1上网比例35.92\%超标；低负荷运行反送压力上升 & 抑制局部潮流反转和新能源消纳困难时段反送\\
+柔性负荷准入与补偿 & Q3中36 t/d购电和上网均较Q2减少16216.93 MWh & 将制氢制氨负荷纳入需求响应和辅助服务资源\\
+储能经济--消纳--可靠性多目标评估 & Q4中5、80、155 MWh分别对应经济、低弃电和零弃电方案 & 避免单一容量比例导致过度储能或储能不足\\
+系统费用和备用责任分担 & Q4测算公共电网支撑价值735.81元/t & 防止平衡成本向其他用户转移\\
+弱联网示范与源网荷储协同 & 完全离网满产自治需1156.31--3006.39 MW装机 & 在产业脱碳、系统安全和经济性之间取得折中\\
+\bottomrule
+\end{tabular}
+\end{table}
+
 \section{结果汇总与综合讨论}
 
 前四问的结果表明，绿电直连型电氢氨园区的运行优化并非单纯追求最低吨氨成本。问题一显示，刚性满负荷生产下虽然绿电比例较高，但上网比例超标。问题二说明，降低日产量可降低成本，却会削弱新能源就地消纳。问题三表明，连续负荷率调节在相同产量下可进一步降低成本并提高指标合格天数，是改善源荷匹配的关键柔性手段。问题四则表明，离网运行需要储能和冗余容量支撑，公共电网的平衡服务具有可量化经济价值。
 
 从工程决策角度看，若以典型场景合规为目标，54 t/d是问题二和问题三中较均衡的日产量方案；若以全年全满足天数最大为目标，问题三中63 t/d表现最好；若以离网可靠性为目标，5 MWh储能可消除常规负荷缺供，但若追求低弃电或零弃电，则需显著提高储能容量。由此可见，绿电直连项目应在吨氨成本、产能利用率、绿电指标、弃电率和电网支撑成本之间进行综合权衡。
 
+\begin{table}[H]
+\centering
+\caption{五问核心发现与决策含义汇总}
+\label{tab:overall_chain}
+\small
+\begin{tabular}{p{0.12\textwidth}p{0.38\textwidth}p{0.38\textwidth}}
+\toprule
+问题 & 核心量化发现 & 对后续决策的含义\\
+\midrule
+Q1 & 典型日上网比例35.92\%，超过20\%约束 & 固定制氨负荷会造成小时级源荷错配，必须引入负荷调节或储能\\
+Q2 & 36 t/d成本最低但0天全满足；54 t/d为典型合规最低成本方案 & 离散降负荷可降本，但产能利用率和本地消纳能力同步下降\\
+Q3 & 36 t/d较Q2降本284.35元/t，45 t/d全满足天数提高225天 & 连续可调负荷是同时改善成本和合规性的关键柔性资源\\
+Q4 & 5 MWh消除缺供，80 MWh满足最大弃电场景弃电率不超过10\%，155 MWh零弃电 & 储能配置必须采用经济性、消纳率和可靠性的多目标权衡\\
+Q5 & 公共电网支撑价值735.81元/t & 并网绿电直连项目应承担系统平衡费用，并以小时级指标监管\\
+\bottomrule
+\end{tabular}
+\end{table}
+
 \section{模型评价与推广}
 
-本文模型的主要优点是：第一，将绿电直连三项政策指标贯穿五问，避免只做电量成本优化；第二，构建了从刚性基准到离散调节、连续调节、离网储能和政策影响的统一递进链条；第三，问题三和问题四均引入互斥二进制变量，避免购售电套利和储能同时充放电；第四，给出了公共电网支撑价值和储能经济--消纳Pareto权衡，使模型结果具有政策解释能力。
+本文模型的优势首先在于主线完整。五问均服从同一小时级功率平衡、同一场景权重、同一题面成本口径和同一绿电指标体系，因此结果可横向比较。其次，模型没有停留在“成本最小”单目标层面，而是持续跟踪自发自用比例、绿电比例、上网比例、弃电率、缺供量、产能利用率和公共电网支撑价值。再次，问题三和问题四引入互斥二进制变量，避免低谷购电价低于上网价时出现同小时购电并上网的非物理解，也避免储能同时充放电。最后，问题四将储能经济最优与消纳最优分离，问题五将模型输出转换为政策证据，使数学模型具有工程和监管解释能力。
 
-模型局限也较明确。真实Haber-Bosch合成氨系统受温度、压力、循环气和催化剂寿命约束，不能像一般电负荷一样快速波动；本文未显式配置氢储罐和氨储罐，因而低估了电氢氨系统内部物料缓冲能力；吨氨成本未纳入题面未给出的电解槽、空分、压缩和储氢储氨投资；风光不确定性仅按24个代表场景处理，未考虑连续极端天气和预测误差。
+与前沿研究相比，本文属于竞赛题面约束下的确定性规划调度模型。国际绿氨优化文献通常进一步采用设计--运行协同优化，同时优化风光、电解槽、Haber-Bosch装置、电池、氢储罐和氨储罐容量；也常用长期气象序列、鲁棒优化、机会约束或CVaR度量风光不确定性。本文的优势是紧贴题面、结果可复现、指标链条清晰；不足是设备容量大多固定，风光不确定性仅由24个代表场景近似，且未刻画合成氨反应回路的热惯性和压力动态。因此，本文结论适合作为竞赛题目下的规划调度和政策分析依据，而非直接替代工程可研中的全寿命成本和动态安全校核。
 
-后续可在当前模型基础上加入负荷爬坡率、启停成本和最小开停时间：
+模型局限主要包括四类。第一，真实Haber-Bosch合成氨系统受温度、压力、循环气、催化剂寿命和安全联锁约束，不能像一般电负荷一样快速波动。第二，本文将电解槽和合成氨装置同步聚合，未显式配置氢储罐和氨储罐，因而没有刻画制氢与制氨之间的物料缓冲能力。第三，吨氨成本未纳入题面未给出的电解槽、空分、压缩、储氢储氨和合成氨固定投资，因此不是完整工程LCOA。第四，并网模型只在园区关口比较购售电量和成本，尚未考虑潮流、电压、无功、短路容量、保护配合和接入容量约束。
+
+后续可在当前MILP框架基础上加入负荷爬坡率、启停成本和最小开停时间：
 \[
 0.1z_t\le u_t\le z_t,\quad
 v_t\ge z_t-z_{t-1},\quad
@@ -596,7 +751,7 @@ H_t=(1-\rho^H)H_{t-1}+Q^{H2,prod}_t-Q^{H2,use}_t,
 \min \sum_sp_sC_s+\lambda\left[\eta+\frac{1}{1-\alpha}\sum_sp_s\xi_s\right],
 \quad \xi_s\ge C_s-\eta.
 \]
-进一步结合配电网潮流、电压约束、辅助服务市场和绿证碳价机制，可将本文模型推广为源网荷储氢氨协同规划与运行评估工具。
+进一步结合配电网潮流、电压约束、辅助服务市场、容量电费、绿证和碳价机制，可将本文模型推广为源网荷储氢氨协同规划与运行评估工具。
 
 \section{结论}
 
@@ -635,6 +790,21 @@ International Energy Agency. Global Hydrogen Review[R]. 2025.
 
 \bibitem{eu_rfnbo}
 European Commission. Commission Delegated Regulation (EU) 2023/1184[R]. 2023.
+
+\bibitem{nayak_green_ammonia}
+Nayak-Luke R, Bañares-Alcántara R. Techno-economic viability of islanded green ammonia as a carbon-free energy vector and as a substitute for conventional production[J]. Energy \& Environmental Science, 2020.
+
+\bibitem{electric_haber_bosch}
+Rosa L, Tonelli M. Optimal design of decentralized ammonia production via electric Haber-Bosch systems[J]. Green Chemistry, 2026.
+
+\bibitem{power_to_ammonia_scheduling}
+Hochhaus L, et al. Optimal scheduling of a large-scale power-to-ammonia process[J]. Computers \& Chemical Engineering, 2023.
+
+\bibitem{cn_eha_dispatch}
+乐生铜等. 考虑能量分配的电-氢-氨耦合系统多主体混合时间尺度优化调度[J]. 电网技术, 2025.
+
+\bibitem{cn_robust_hydrogen_ammonia}
+胡利等. 考虑氢氨储运的综合能源系统两阶段鲁棒优化经济调度[J]. 电力建设, 2026.
 \end{thebibliography}
 
 \appendix
@@ -645,17 +815,37 @@ European Commission. Commission Delegated Regulation (EU) 2023/1184[R]. 2023.
 
 \begin{table}[H]
 \centering
-\caption{主要输出文件索引}
+\caption{主要代码文件与功能}
 \small
-\begin{tabular}{p{0.16\textwidth}p{0.72\textwidth}}
+\begin{tabular}{p{0.38\textwidth}p{0.50\textwidth}}
+\toprule
+文件 & 功能\\
+\midrule
+\texttt{model\_common/data.py} & 系统参数、附件读取、风光场景组合、分时电价映射\\
+\texttt{model\_common/metrics.py} & 生产负荷、购售电功率、绿电指标和问题一成本核算\\
+\texttt{model\_common/plotting.py} & 中国电机工程学报风格绘图、PDF/PNG/SVG统一输出\\
+\texttt{问题1/solve\_q1.py} & 典型日刚性满负荷功率平衡、指标核算和图件生成\\
+\texttt{问题2/solve\_q2.py} & 离散开停机边际成本排序、24场景年度统计和分布图件\\
+\texttt{问题3/solve\_q3.py} & 连续负荷率MILP、购售电互斥、与问题二同口径比较\\
+\texttt{问题4/solve\_q4.py} & 离网无储能、有储能MILP、容量扫描、Pareto和并网同产量比较\\
+\texttt{问题5/solve\_q5.py} & 读取前四问结果，生成模型证据、政策依据和建议矩阵\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{主要输出文件索引}
+\scriptsize
+\begin{tabular}{p{0.12\textwidth}p{0.78\textwidth}}
 \toprule
 问题 & 主要输出 \\
 \midrule
-Q1 & \begin{tabular}[t]{@{}l@{}}\texttt{q1\_summary.csv}，\texttt{q1\_hourly\_results.csv}，图1--图5\end{tabular} \\
-Q2 & \begin{tabular}[t]{@{}l@{}}\texttt{q2\_typical\_summary.csv}，\texttt{q2\_annual\_summary.csv}，图1--图7\end{tabular} \\
-Q3 & \begin{tabular}[t]{@{}l@{}}\texttt{q3\_annual\_summary.csv}\\ \texttt{q3\_compare\_q2\_summary.csv}，图1--图8\end{tabular} \\
-Q4 & \begin{tabular}[t]{@{}l@{}}\texttt{q4\_storage\_pareto\_summary.csv}\\ \texttt{q4\_mode\_comparison\_summary.csv}，图1--图6\end{tabular} \\
-Q5 & \begin{tabular}[t]{@{}l@{}}\texttt{q5\_model\_evidence\_summary.csv}\\ \texttt{q5\_policy\_recommendation\_matrix.csv}\end{tabular} \\
+Q1 & \texttt{q1\_hourly\_results.csv}、\texttt{q1\_summary.csv}、\texttt{q1\_result\_summary.md}、\texttt{q1\_fig1--q1\_fig5}\\
+Q2 & 典型/24场景小时调度、典型汇总、年度汇总、分布汇总和\texttt{q2\_fig1--q2\_fig7}\\
+Q3 & 典型/24场景小时调度、年度汇总、Q2/Q3对比汇总、分布汇总和\texttt{q3\_fig1--q3\_fig8}\\
+Q4 & 无储能、有储能、容量扫描、Pareto、并网同产量、模式对比、能源自治估算和校验CSV\\
+Q5 & 模型证据矩阵、政策依据矩阵、政策建议矩阵和\texttt{q5\_result\_summary.md}\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -663,6 +853,16 @@ Q5 & \begin{tabular}[t]{@{}l@{}}\texttt{q5\_model\_evidence\_summary.csv}\\ \tex
 \section{附录B：数值校验说明}
 
 问题三连续调节模型校验显示，最大功率平衡误差为$1.42\times10^{-14}$ MW，同时购电与售电小时数为0，日产量约束误差为$1.42\times10^{-14}$ t。问题四离网模型校验显示，无储能与有储能功率平衡最大误差均为$7.11\times10^{-15}$ MW，储能SOC动态最大误差为$6.66\times10^{-15}$ MWh，储能同时充放电乘积最大值为$6.35\times10^{-14}$，均为数值优化容差量级。
+
+复现时可在项目根目录依次运行：
+\begin{quote}\small
+\texttt{python .\textbackslash 问题1\_典型风光场景指标分析\textbackslash solve\_q1.py}\\
+\texttt{python .\textbackslash 问题2\_离散制氨调节优化\textbackslash solve\_q2.py}\\
+\texttt{python .\textbackslash 问题3\_连续制氨调节优化\textbackslash solve\_q3.py}\\
+\texttt{python .\textbackslash 问题4\_离网储能配置优化\textbackslash solve\_q4.py}\\
+\texttt{python .\textbackslash 问题5\_政策与电力系统影响分析\textbackslash solve\_q5.py}
+\end{quote}
+每个脚本均从原始附件读取数据并覆盖生成本问\texttt{outputs}文件夹，最终论文数值应以这些CSV和Markdown摘要为准。
 
 \section{附录C：未放入正文的补充材料}
 
