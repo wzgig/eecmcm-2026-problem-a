@@ -27,7 +27,7 @@ def pct(value: float) -> str:
 
 
 def load_prior_results() -> dict[str, pd.DataFrame]:
-    return {
+    results = {
         "q1_summary": pd.read_csv(Q1_OUT / "q1_summary.csv"),
         "q2_annual": pd.read_csv(Q2_OUT / "q2_annual_summary.csv"),
         "q3_annual": pd.read_csv(Q3_OUT / "q3_annual_summary.csv"),
@@ -38,6 +38,9 @@ def load_prior_results() -> dict[str, pd.DataFrame]:
         "q4_mode_compare": pd.read_csv(Q4_OUT / "q4_mode_comparison_summary.csv"),
         "q4_capacity": pd.read_csv(Q4_OUT / "q4_min_capacity_estimate.csv"),
     }
+    pareto_path = Q4_OUT / "q4_storage_pareto_summary.csv"
+    results["q4_pareto"] = pd.read_csv(pareto_path) if pareto_path.exists() else pd.DataFrame()
+    return results
 
 
 def build_model_evidence(results: dict[str, pd.DataFrame]) -> pd.DataFrame:
@@ -50,11 +53,23 @@ def build_model_evidence(results: dict[str, pd.DataFrame]) -> pd.DataFrame:
     q4_grid = results["q4_grid_annual"].iloc[0]
     q4_comp = results["q4_mode_compare"].iloc[0]
     q4_cap = results["q4_capacity"]
+    q4_pareto = results["q4_pareto"]
 
     q3_72 = q3.loc[q3["production_t_per_day"] == 72].iloc[0]
     q3_36 = q3.loc[q3["production_t_per_day"] == 36].iloc[0]
     q3c_36 = q3c.loc[q3c["production_t_per_day"] == 36].iloc[0]
     q2_36 = q2.loc[q2["production_t_per_day"] == 36].iloc[0]
+    if not q4_pareto.empty:
+        p10 = q4_pareto.loc[q4_pareto["scheme"] == "弃电率不超过10%"].iloc[0]
+        zero = q4_pareto.loc[q4_pareto["scheme"] == "零弃电"].iloc[0]
+        econ = q4_pareto.loc[q4_pareto["scheme"] == "经济最优正储能"].iloc[0]
+        pareto_text = (
+            f"最大弃电场景下，经济方案为{econ['storage_capacity_mwh']:.0f}MWh；"
+            f"若要求弃电率≤10%，需{p10['storage_capacity_mwh']:.0f}MWh且吨氨成本{p10['ton_cost_yuan_per_t']:.2f}元/t；"
+            f"零弃电需{zero['storage_capacity_mwh']:.0f}MWh且吨氨成本{zero['ton_cost_yuan_per_t']:.2f}元/t。"
+        )
+    else:
+        pareto_text = "储能容量需要在经济性、弃电率和可靠性之间进行权衡。"
 
     rows = [
         {
@@ -125,6 +140,13 @@ def build_model_evidence(results: dict[str, pd.DataFrame]) -> pd.DataFrame:
             ),
             "system_impact": "完全离网满产自治需要极大冗余装机，经济性和土地资源约束突出。",
             "policy_implication": "应鼓励弱联网、源网荷储协同和市场化备用，而不是简单追求完全离网。",
+        },
+        {
+            "evidence_id": "E8",
+            "source_problem": "Q4",
+            "quantitative_result": pareto_text,
+            "system_impact": "储能容量存在成本-消纳Pareto权衡，经济最优容量不等同于消纳最优容量。",
+            "policy_implication": "储能配置考核应采用经济性、弃电率和可靠性多目标评估，而不是只规定单一容量比例。",
         },
     ]
     return pd.DataFrame(rows)
@@ -227,8 +249,8 @@ def build_recommendation_matrix() -> pd.DataFrame:
             "expected_effect": "提升园区对电网的友好性，减少外部调峰需求。",
         },
         {
-            "recommendation": "建立储能配置的经济性和可靠性双目标评估",
-            "model_basis": "Q4中5MWh储能为经济方案，155MWh可零弃电但吨氨成本更高。",
+            "recommendation": "建立储能配置的经济性、弃电率和可靠性多目标评估",
+            "model_basis": "Q4中5MWh储能为经济方案，80MWh可使最大弃电场景弃电率不超过10%，155MWh可零弃电但吨氨成本更高。",
             "policy_basis": "P01/P02要求合理配置储能，P08强调优化储能规模和系统平衡能力。",
             "expected_effect": "避免过度储能或储能不足，兼顾消纳、可靠性和成本。",
         },

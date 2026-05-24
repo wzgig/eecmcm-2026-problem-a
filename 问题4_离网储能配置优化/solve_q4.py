@@ -580,6 +580,54 @@ def choose_storage_capacity(scan: pd.DataFrame) -> tuple[float, pd.Series, str]:
     return float(row["storage_capacity_mwh"]), row, "在能够提升无储能日产氨量的正储能容量中，选择吨氨成本最低方案。"
 
 
+def build_storage_pareto_summary(scan: pd.DataFrame) -> pd.DataFrame:
+    rows: list[dict[str, float | str]] = []
+    thresholds = [0.20, 0.15, 0.10, 0.05, 0.01, 0.0]
+    for eps in thresholds:
+        if eps == 0.0:
+            feasible = scan[scan["弃风弃光率"] <= 1e-9].copy()
+            label = "零弃电"
+        else:
+            feasible = scan[scan["弃风弃光率"] <= eps].copy()
+            label = f"弃电率不超过{eps:.0%}"
+        if feasible.empty:
+            continue
+        row = feasible.loc[feasible["吨氨成本"].idxmin()]
+        rows.append(
+            {
+                "scheme": label,
+                "epsilon_curtailment_rate": eps,
+                "storage_capacity_mwh": float(row["storage_capacity_mwh"]),
+                "storage_power_mw": float(row["storage_power_mw"]),
+                "daily_ammonia_t": float(row["日产氨量"]),
+                "curtailment_mwh": float(row["弃风弃光电量"]),
+                "curtailment_rate": float(row["弃风弃光率"]),
+                "renewable_utilization": float(row["风光利用率"]),
+                "ton_cost_yuan_per_t": float(row["吨氨成本"]),
+            }
+        )
+
+    for label, idx in [
+        ("经济最优正储能", scan[scan["storage_capacity_mwh"] > 0]["吨氨成本"].idxmin()),
+        ("最大日产氨/消纳优先", scan["日产氨量"].idxmax()),
+    ]:
+        row = scan.loc[idx]
+        rows.append(
+            {
+                "scheme": label,
+                "epsilon_curtailment_rate": np.nan,
+                "storage_capacity_mwh": float(row["storage_capacity_mwh"]),
+                "storage_power_mw": float(row["storage_power_mw"]),
+                "daily_ammonia_t": float(row["日产氨量"]),
+                "curtailment_mwh": float(row["弃风弃光电量"]),
+                "curtailment_rate": float(row["弃风弃光率"]),
+                "renewable_utilization": float(row["风光利用率"]),
+                "ton_cost_yuan_per_t": float(row["吨氨成本"]),
+            }
+        )
+    return pd.DataFrame(rows).drop_duplicates(subset=["scheme"], keep="first")
+
+
 def run_storage_cases(params: SystemParams, storage_capacity_mwh: float) -> tuple[pd.DataFrame, pd.DataFrame]:
     scenarios = add_regular_load_to_scenarios(params)
     hourly_parts = []
@@ -826,6 +874,77 @@ def plot_storage_capacity_scan(scan: pd.DataFrame, selected_capacity: float, out
     plt.close(fig)
 
 
+def plot_storage_pareto(scan: pd.DataFrame, pareto: pd.DataFrame, selected_capacity: float, output_dir: Path) -> None:
+    set_csee_style()
+    df = scan.sort_values("storage_capacity_mwh")
+    fig, ax1 = plt.subplots(figsize=(7.6, 4.8))
+    sc = ax1.scatter(
+        df["弃风弃光率"] * 100,
+        df["吨氨成本"],
+        c=df["storage_capacity_mwh"],
+        cmap="YlGnBu",
+        s=34,
+        edgecolor="#444444",
+        linewidth=0.35,
+        label="容量扫描点",
+    )
+    selected = df.loc[df["storage_capacity_mwh"].eq(selected_capacity)].iloc[0]
+    ax1.scatter(
+        [selected["弃风弃光率"] * 100],
+        [selected["吨氨成本"]],
+        s=70,
+        marker="*",
+        color=CSEE_COLORS["red"],
+        edgecolor="black",
+        linewidth=0.5,
+        label="经济方案",
+        zorder=4,
+    )
+    zero = df.loc[df["弃风弃光电量"].idxmin()]
+    ax1.scatter(
+        [zero["弃风弃光率"] * 100],
+        [zero["吨氨成本"]],
+        s=64,
+        marker="D",
+        color=CSEE_COLORS["green"],
+        edgecolor="black",
+        linewidth=0.5,
+        label="消纳优先",
+        zorder=4,
+    )
+    label_offsets = {
+        "弃电率不超过20%": (-8, 14, "center"),
+        "弃电率不超过15%": (-6, 18, "center"),
+        "弃电率不超过10%": (0, 18, "center"),
+        "弃电率不超过5%": (0, 22, "center"),
+        "弃电率不超过1%": (22, 36, "left"),
+        "零弃电": (10, 8, "left"),
+    }
+    for _, row in pareto[pareto["scheme"].str.contains("弃电率不超过|零弃电", regex=True)].iterrows():
+        label = row["scheme"].replace("弃电率不超过", "≤")
+        dx, dy, ha = label_offsets.get(row["scheme"], (0, 16, "center"))
+        ax1.annotate(
+            label,
+            xy=(row["curtailment_rate"] * 100, row["ton_cost_yuan_per_t"]),
+            xytext=(dx, dy),
+            textcoords="offset points",
+            ha=ha,
+            va="center",
+            fontsize=7,
+            arrowprops={"arrowstyle": "-", "color": "#555555", "lw": 0.45, "shrinkA": 0, "shrinkB": 4},
+        )
+    ax1.set_xlabel("弃风弃光率/%")
+    ax1.set_ylabel("吨氨成本/(元/t)")
+    ax1.set_title("最大弃电场景储能容量的成本-消纳权衡")
+    ax1.grid(True, linestyle="--", alpha=0.4)
+    ax1.legend(frameon=False, ncol=3, loc="upper center", bbox_to_anchor=(0.5, -0.18))
+    cbar = fig.colorbar(sc, ax=ax1, fraction=0.035, pad=0.02)
+    cbar.set_label("储能容量/MWh")
+    fig.subplots_adjust(left=0.11, right=0.92, top=0.88, bottom=0.24)
+    save_figure(fig, output_dir / "q4_fig6_storage_pareto_csee")
+    plt.close(fig)
+
+
 def plot_selected_storage_dispatch(hourly: pd.DataFrame, output_dir: Path) -> None:
     set_csee_style()
     df = hourly.sort_values("hour")
@@ -955,6 +1074,7 @@ def write_markdown_summary(
     no_storage_summary: pd.DataFrame,
     no_storage_annual: pd.DataFrame,
     capacity_scan: pd.DataFrame,
+    pareto_summary: pd.DataFrame,
     selected_capacity: float,
     selected_row: pd.Series,
     selection_note: str,
@@ -1003,6 +1123,25 @@ def write_markdown_summary(
             cost=utilization_max_row["吨氨成本"],
         ),
         "",
+        "### 经济-消纳权衡方案",
+        "",
+        "| 方案 | 储能容量/MWh | 日产氨量/t | 弃风弃光率 | 风光利用率 | 吨氨成本/(元/t) |",
+        "|---|---:|---:|---:|---:|---:|",
+    ]
+    for _, row in pareto_summary.iterrows():
+        lines.append(
+            "| {scheme} | {cap:.2f} | {nh3:.2f} | {cur:.2%} | {use:.2%} | {cost:,.2f} |".format(
+                scheme=row["scheme"],
+                cap=row["storage_capacity_mwh"],
+                nh3=row["daily_ammonia_t"],
+                cur=row["curtailment_rate"],
+                use=row["renewable_utilization"],
+                cost=row["ton_cost_yuan_per_t"],
+            )
+        )
+    lines.extend(
+        [
+        "",
         "## 24场景储能调度年度结果",
         "",
         "| 指标 | 无储能 | 有储能 |",
@@ -1019,6 +1158,7 @@ def write_markdown_summary(
         "| 模式 | 年产氨量/t | 年总成本/万元 | 年均吨氨成本/(元/t) |",
         "|---|---:|---:|---:|",
     ]
+    )
     for _, row in mode_compare.iterrows():
         lines.append(
             f"| {row['display_mode']} | {row['annual_ammonia_t']:,.2f} | {row['annual_total_cost_yuan'] / 10000:,.2f} | {row['annual_average_ton_cost_yuan_per_t']:,.2f} |"
@@ -1114,6 +1254,7 @@ def main() -> None:
         int(max_curtail["pv_scenario"]),
     )
     selected_capacity, selected_row, selection_note = choose_storage_capacity(capacity_scan)
+    pareto_summary = build_storage_pareto_summary(capacity_scan)
 
     storage_selected_hourly, _ = solve_storage_offgrid(
         max_group,
@@ -1143,6 +1284,7 @@ def main() -> None:
     no_storage_summary.to_csv(OUT_DIR / "q4_no_storage_summary.csv", index=False, encoding="utf-8-sig")
     no_storage_annual.to_csv(OUT_DIR / "q4_no_storage_annual_summary.csv", index=False, encoding="utf-8-sig")
     capacity_scan.to_csv(OUT_DIR / "q4_storage_capacity_scan.csv", index=False, encoding="utf-8-sig")
+    pareto_summary.to_csv(OUT_DIR / "q4_storage_pareto_summary.csv", index=False, encoding="utf-8-sig")
     storage_selected_hourly.to_csv(OUT_DIR / "q4_storage_selected_hourly.csv", index=False, encoding="utf-8-sig")
     storage_hourly.to_csv(OUT_DIR / "q4_storage_all_scenario_hourly.csv", index=False, encoding="utf-8-sig")
     storage_summary.to_csv(OUT_DIR / "q4_storage_all_scenario_summary.csv", index=False, encoding="utf-8-sig")
@@ -1158,6 +1300,7 @@ def main() -> None:
         no_storage_summary,
         no_storage_annual,
         capacity_scan,
+        pareto_summary,
         selected_capacity,
         selected_row,
         selection_note,
@@ -1170,6 +1313,7 @@ def main() -> None:
 
     plot_no_storage_heatmaps(no_storage_summary, OUT_DIR)
     plot_storage_capacity_scan(capacity_scan, selected_capacity, OUT_DIR)
+    plot_storage_pareto(capacity_scan, pareto_summary, selected_capacity, OUT_DIR)
     plot_selected_storage_dispatch(storage_selected_hourly, OUT_DIR)
     plot_no_storage_vs_storage(no_storage_summary, storage_summary, OUT_DIR)
     plot_mode_cost_breakdown(mode_compare, OUT_DIR)
